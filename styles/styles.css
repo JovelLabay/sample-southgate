@@ -12,7 +12,7 @@
 @font-face {
   font-family: "FF Good Pro";
   src: local("FFGoodPro"),
-    url("../public/fonts/FFGoodPro-Medium.ttf") format("truetype");
+    url("../public/fonts/FFGoodPro-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
