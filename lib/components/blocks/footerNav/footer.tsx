@@ -18,10 +18,10 @@ export default function Footer() {
           />
         </div>
         <div className="ml-4 pt-20 text-goodpro flex-grow">
-          <span className="block py-2 text-3xl">
+          <span className="block py-2 text-2xl font-bold">
             SOUTHGATE EXPRESS MARKETING INC,
           </span>
-          <span className="block text-2xl">
+          <span className="block text-1xl">
             123 Street Mandaue City Philippines 6014
           </span>
           <span className="block">mail@southgateexpress.com</span>
