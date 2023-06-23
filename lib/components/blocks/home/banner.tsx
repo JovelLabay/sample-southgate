@@ -1,9 +1,12 @@
 "use client";
+import Image from "next/image";
+import Giorgio from "public/giorgio.png";
 
 export default function HomeBanner() {
   return (
     <div>
-      <h1>Home Banner</h1>
+      <Image src={Giorgio} alt="Giorgio" className="banner" />
+      <span className="text-white">Test</span>
     </div>
   );
 }
