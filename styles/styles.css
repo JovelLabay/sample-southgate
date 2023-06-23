@@ -1,1 +1,15 @@
 /* WRITE CUSTOM CSS HERE */
+
+.banner {
+  background-image: url("../public/giorgio.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

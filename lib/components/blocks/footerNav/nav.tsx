@@ -2,8 +2,8 @@
 
 export default function Nav() {
   return (
-    <div>
-      <h1>Home Banner</h1>
+    <div className="text-white">
+      <h1>Header Banner</h1>
     </div>
   );
 }
