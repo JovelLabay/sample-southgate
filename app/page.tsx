@@ -5,6 +5,25 @@ import Logo from "public/images/logo.png";
 import Juliana from "public/images/juliana.png";
 
 export default function Home() {
+  // Sample data for dynamic products in Home Page
+  const sampleProducts = [
+    {
+      label: "CAR",
+      image: "public/images/giorgio.png",
+    },
+    {
+      label: "SUV",
+      image: "public/images/giorgio.png",
+    },
+    {
+      label: "VAN",
+      image: "public/images/giorgio.png",
+    },
+    {
+      label: "TRUCKS & BUS",
+      image: "public/images/giorgio.png",
+    },
+  ];
   return (
     <main>
       {/* YOU DIVIDE THE SECTION FROM HOMEPAGE HERE */}
