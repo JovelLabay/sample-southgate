@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import SouthGate from "public/images/southgate2.svg";
+import SouthGate from "public/images/southgate.png";
 
 export default function Nav() {
   return (
