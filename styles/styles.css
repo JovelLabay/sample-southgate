@@ -1,18 +1,4 @@
 /* WRITE CUSTOM CSS HERE */
-
-.banner {
-  background-image: url("../public/giorgio.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
 /*CUSTOM FONTS START*/
 @font-face {
   font-family: "Carrois Gothic";
@@ -37,10 +23,65 @@
 .text-goodpro {
   font-family: "FF Good Pro";
 }
+
+.text-demonicyellow {
+  color: #ffe600;
+}
 /*CUSTOM FONTS END*/
 
 /*CUSTOM COLORS START*/
 .bg-darkcharcoal {
   background-color: #2b2b2b;
 }
+
 /*CUSTOM COLORS END*/
+
+.banner {
+  background-image: url("../public/giorgio.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 840px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.parallelogram-background {
+  width: 90%;
+  height: 900px;
+  position: relative;
+  transform: skewX(-9deg);
+  background-color: #2b2b2b;
+}
+
+.parallelogram-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: -40px;
+  width: 400px;
+  height: 100%;
+  background-color: inherit;
+  transform: skewX(9deg);
+}
+
+.juliana {
+  position: relative;
+  width: 485px;
+  height: 628px;
+}
+
+.juliana-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(116, 118, 6, 0.5); /* light gray with 50% opacity */
+  width: 100%;
+  height: 100%;
+}
