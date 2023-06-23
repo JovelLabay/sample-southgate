@@ -1,1 +1,13 @@
 /* WRITE CUSTOM CSS HERE */
+
+@font-face {
+  font-family: "Carrois Gothic";
+  src: local("CarroisGothic"),
+    url("../public/fonts/CarroisGothic-Regular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.text-carrois {
+  font-family: "Carrois Gothic";
+}
