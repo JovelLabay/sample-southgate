@@ -8,8 +8,8 @@ import YoutubeLogo from "public/images/yt_logo.png";
 export default function Footer() {
   return (
     <div className="bg-darkcharcoal text-white flex">
-      <div className="flex align-center w-full">
-        <div className="p-10 justify-start">
+      <div className="flex align-center w-full margin">
+        <div className="py-10 pr-5 justify-start">
           <Image
             src={Logo}
             width={200}
