@@ -1,13 +1,33 @@
 /* WRITE CUSTOM CSS HERE */
 
+/*CUSTOM FONTS START*/
 @font-face {
   font-family: "Carrois Gothic";
   src: local("CarroisGothic"),
     url("../public/fonts/CarroisGothic-Regular.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FF Good Pro";
+  src: local("FFGoodPro"),
+    url("../public/fonts/FFGoodPro-Medium.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
 .text-carrois {
   font-family: "Carrois Gothic";
 }
+
+.text-goodpro {
+  font-family: "FF Good Pro";
+}
+/*CUSTOM FONTS END*/
+
+/*CUSTOM COLORS START*/
+.bg-darkcharcoal {
+  background-color: #2b2b2b;
+}
+/*CUSTOM COLORS END*/

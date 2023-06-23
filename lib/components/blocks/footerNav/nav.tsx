@@ -8,7 +8,7 @@ export default function Nav() {
       <div className="flex items-center border-black border-solid">
         <Image src={SouthGate} alt="SouthGate" width={500} height={500} />
       </div>
-      <nav className="flex w-full justify-end items-center text-black text-carrois text-3xl border-black border-solid">
+      <nav className="flex w-full justify-end items-center text-black text-carrois text-3xl font-bold">
         <a href="#" className=" px-4 hover:text-gray-300">
           HOME
         </a>
