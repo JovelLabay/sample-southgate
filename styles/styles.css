@@ -31,3 +31,8 @@
   background-color: #2b2b2b;
 }
 /*CUSTOM COLORS END*/
+
+.margin {
+  margin-left: 90px;
+  margin-right: 90px;
+}
