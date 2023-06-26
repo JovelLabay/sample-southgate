@@ -8,8 +8,8 @@ import YoutubeLogo from "public/images/yt_logo.png";
 export default function Footer() {
   return (
     <div className="bg-darkcharcoal text-white flex">
-      <div className="flex align-center w-full">
-        <div className="p-10 justify-start">
+      <div className="flex align-center w-full margin">
+        <div className="py-10 pr-5 justify-start">
           <Image
             src={Logo}
             width={200}
@@ -30,18 +30,13 @@ export default function Footer() {
 
         <div className="flex flex-grow justify-end">
           <div className="flex flex-col items-end">
-            <div className="p-10 flex">
-              <Image
-                src={FacebookLogo}
-                alt="Facebook"
-                height={30}
-                width={110}
-              />
-              <Image src={YoutubeLogo} alt="Facebook" height={30} width={70} />
+            <div className="p-10 flex gap-3">
+              <Image src={FacebookLogo} alt="Facebook" height={15} width={70} />
+              <Image src={YoutubeLogo} alt="Facebook" height={15} width={45} />
             </div>
             <div className="mt-auto flex p-10">
               @ 2023 Southgate Express Marketing Inc. Powered by &nbsp;
-              <Image src={HatchitLogo} alt="Hatchit" height={200} width={100} />
+              <Image src={HatchitLogo} alt="Hatchit" height={40} width={170} />
             </div>
           </div>
         </div>

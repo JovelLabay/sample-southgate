@@ -4,21 +4,21 @@ import SouthGate from "public/images/southgate.png";
 
 export default function Nav() {
   return (
-    <div className="flex py-2 bg-transparent">
-      <div className="flex items-center ml-10">
+    <div className="flex py-2 bg-transparent margin">
+      <div className="flex items-center">
         <Image src={SouthGate} alt="SouthGate" width={300} height={300} />
       </div>
-      <nav className="flex w-full justify-end items-center gap-8 text-white px-10 mx-10 text-carrois text-2xl">
-        <a href="#" className=" px-4 hover:text-gray-300">
+      <nav className="flex w-full gap-[50px] justify-end items-center text-black text-carrois text-2xl font-bold">
+        <a href="#" className=" hover:text-gray-300">
           HOME
         </a>
-        <a href="#" className="px-4 hover:text-gray-300">
+        <a href="#" className=" hover:text-gray-300">
           ABOUT
         </a>
-        <a href="#" className=" px-4 hover:text-gray-300">
+        <a href="#" className=" hover:text-gray-300">
           PRODUCT
         </a>
-        <a href="#" className=" px-4 hover:text-gray-300">
+        <a href="#" className=" hover:text-gray-300">
           CONTACT
         </a>
       </nav>
