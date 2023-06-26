@@ -13,8 +13,8 @@ type Brand = {
 export default function DynamicBrands({ brands }: Props) {
   return (
     <div className="flex flex-row my-10 justify-end  h-[600px]">
-      <div className="flex items-center justify-center w-[600px]">
-        <span className="flex text-goodpro text-[80px] ml-[100px] -rotate-90 font-extrabold w-[500px] h-auto">
+      <div className="-rotate-90 flex  h-[300px] w-[650px] items-start justify-center -mr-10 mt-[160px]">
+        <span className="flex text-goodpro text-[60px] font-bold w-[500px] mt-10 items-end align-bottom justify-center">
           OUR BRANDS
         </span>
       </div>
