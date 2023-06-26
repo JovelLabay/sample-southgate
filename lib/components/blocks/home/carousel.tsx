@@ -27,7 +27,7 @@ export default function ControlledCarousel({ statements }: Props) {
     <Carousel
       activeIndex={index}
       onSelect={handleSelect}
-      className="my-10 h-[600px] flex justify-center items-center"
+      className="margin-y h-[600px] flex justify-center items-center"
       indicators
     >
       {statements.map((statement, idx) => (

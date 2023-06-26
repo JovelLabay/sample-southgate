@@ -1,4 +1,9 @@
 /* WRITE CUSTOM CSS HERE */
+
+main {
+  background-color: white;
+}
+
 /*CUSTOM FONTS START*/
 @font-face {
   font-family: "Carrois Gothic";
@@ -41,7 +46,6 @@
 /*CUSTOM COLORS END*/
 
 .banner {
-  background-image: url("../public/images/giorgio.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,6 +57,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+  filter: brightness(0.5);
 }
 
 .parallelogram-background {
@@ -102,4 +107,9 @@
 .margin {
   margin-left: 90px;
   margin-right: 90px;
+}
+
+.margin-y {
+  margin-top: 110px;
+  margin-bottom: 110px;
 }
