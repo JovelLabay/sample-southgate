@@ -32,7 +32,7 @@ export default function Home() {
       {/* Image Section */}
       <section className="flex flex-col mt-[90px] text-white">
         <div className="parallelogram-background ">
-          <div className="skew-x-[9deg] flex ml-[70px] items-center w-full h-full my-[70px]">
+          <div className="skew-x-[9deg] flex margin items-center w-full h-full my-[70px]">
             <div className="juliana">
               <div className="juliana-overlay"></div>
               <Image src={Juliana} alt="Juliana Photo" />
