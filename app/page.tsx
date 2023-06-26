@@ -25,6 +25,33 @@ export default function Home() {
     },
   ];
 
+  const sampleStatements = [
+    {
+      name: "Hans Tan",
+      title: "President",
+      image: "",
+      statement:
+        "OUR MOST TRUSTED TIRE SUPPLIER - QUALITY TIRES AND EXCELLENT SERVICE",
+      company: "Company A",
+    },
+    {
+      name: "John Doe",
+      title: "President",
+      image: "",
+      statement:
+        "OUR MOST TRUSTED TIRE SUPPLIER - QUALITY TIRES AND EXCELLENT SERVICE",
+      company: "Company B",
+    },
+    {
+      name: "Jane Doe",
+      title: "President",
+      image: "",
+      statement:
+        "OUR MOST TRUSTED TIRE SUPPLIER - QUALITY TIRES AND EXCELLENT SERVICE",
+      company: "Company C",
+    },
+  ];
+
   return (
     <main>
       {/* YOU DIVIDE THE SECTION FROM HOMEPAGE HERE */}
@@ -63,13 +90,13 @@ export default function Home() {
         </div>
       </section>
       {/* Products Section */}
-      <section className="my-10">
+      <section>
         <DynamicProducts products={sampleProducts} />
       </section>
-      <section>
+      <section className="h-[200px] block">
         {/* Carousel Here */}
         <span>Carousel Here</span>
-        <CarouselStatements />
+        <CarouselStatements statements={sampleStatements} />
       </section>
       <section className="w-full">
         <EmbedVideo />

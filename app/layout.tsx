@@ -1,6 +1,7 @@
 // STYLES
 import "../styles/globals.css";
 import "../styles/styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Fonts
 import { Inter } from "next/font/google";
