@@ -63,6 +63,9 @@ export default function Home() {
       <section className="my-10">
         <DynamicProducts products={sampleProducts} />
       </section>
+      <section>
+        <div className="parallelogram-background"></div>
+      </section>
     </main>
   );
 }
