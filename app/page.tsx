@@ -1,51 +1,32 @@
 "use client";
 import Image from "next/image";
-import HomeBanner from "@/lib/components/blocks/home/banner";
-import Logo from "public/images/logo.png";
-import Juliana from "public/images/juliana.png";
+import HomeBanner from "@/lib/components/blocks/home/homeBanner";
+import DynamicProducts from "@/lib/components/blocks/home/products";
+import Juliana from "@/public/images/juliana.png";
 
 export default function Home() {
   // Sample data for dynamic products in Home Page
   const sampleProducts = [
     {
       label: "CAR",
-      image: "public/images/giorgio.png",
     },
     {
       label: "SUV",
-      image: "public/images/giorgio.png",
     },
     {
       label: "VAN",
-      image: "public/images/giorgio.png",
     },
     {
       label: "TRUCKS & BUS",
-      image: "public/images/giorgio.png",
     },
   ];
+
   return (
     <main>
       {/* YOU DIVIDE THE SECTION FROM HOMEPAGE HERE */}
       <section>
         {/* Home Banner contains image for background only */}
         <HomeBanner />
-        <div className="p-10 justify-start mt-[80px]">
-          <Image
-            src={Logo}
-            alt="Southgate Express marketing Inc."
-            width={200}
-            height={100}
-          />
-        </div>
-        <div className="flex flex-col items-start ml-[60px]">
-          <span className="text-carrois text-demonicyellow text-4xl font-light">
-            Lorem Ipsum
-          </span>
-          <span className="text-goodpro text-white text-7xl font-bold mt-3">
-            TECHNOLOGY MEETS <br /> PERFORMANCE
-          </span>
-        </div>
       </section>
       {/* Image Section */}
       <section className="flex flex-col mt-[90px] text-white">
@@ -72,7 +53,9 @@ export default function Home() {
         </div>
       </section>
       {/* Products Section */}
-      <section></section>
+      <section className="my-10">
+        <DynamicProducts products={sampleProducts} />
+      </section>
     </main>
   );
 }
