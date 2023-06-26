@@ -27,12 +27,15 @@ export default function ControlledCarousel({ statements }: Props) {
     <Carousel
       activeIndex={index}
       onSelect={handleSelect}
-      className="my-10 h-[600px] flex"
+      className="my-10 h-[600px] flex justify-center items-center"
       indicators
     >
       {statements.map((statement, idx) => (
-        <Carousel.Item key={idx} className="flex flex-col">
-          <div className="w-full">
+        <Carousel.Item
+          key={idx}
+          className="flex flex-col items-center justify-center"
+        >
+          <div className="w-full flex items-center justify-center">
             <div className="juliana-overlay"></div>
             <Image
               src={MikeBird}
@@ -42,11 +45,13 @@ export default function ControlledCarousel({ statements }: Props) {
               className="w-full h-[600px]"
             />
           </div>
-          <Carousel.Caption>
+          <Carousel.Caption className="flex items-center justify-center mb-8">
             <div className="flex items-center justify-center">
               <div className="flex flex-row">
-                <div className="flex">
-                  <Image src={Person} alt="Person" width={300} height={150} />
+                <div className="flex justify-center items-center">
+                  <div className="flex items-center justify-center">
+                    <Image src={Person} alt="Person" width={300} height={150} />
+                  </div>
                 </div>
                 <div className="flex flex-col justify-center text-left ml-[70px]">
                   <p

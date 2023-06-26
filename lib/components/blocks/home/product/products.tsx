@@ -14,9 +14,11 @@ type Props = {
 export default function DynamicProducts({ products }: Props) {
   return (
     <div className="flex flex-col bg-red-200 w-[100%] my-10">
-      <div className="flex flex-row justify-end gap-5 bg-green-500">
-        <div className=" -rotate-90 flex flex-row gap-5 mb-[500px] bg-red-400">
-          <span className="flex">OUR PRODUCTS</span>
+      <div className="flex flex-row justify-end bg-green-500">
+        <div className=" -rotate-90 flex flex-row bg-red-400">
+          <span className="flex text-goodpro text-5xl font-bold">
+            OUR PRODUCTS
+          </span>
         </div>
         <div className="flex flex-row gap-5">
           {products.map((product, index) => (
