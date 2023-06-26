@@ -2,8 +2,11 @@
 import Image from "next/image";
 import HomeBanner from "@/lib/components/blocks/home/homeBanner";
 import DynamicProducts from "@/lib/components/blocks/home/products";
+import CarouselStatements from "@/lib/functions/carousel";
 import Button from "@/lib/functions/button";
+import EmbedVideo from "@/lib/components/blocks/home/embedVideo";
 import Juliana from "@/public/images/juliana.png";
+import { Carousel } from "react-bootstrap";
 
 export default function Home() {
   // Sample data for dynamic products in Home Page
@@ -64,7 +67,12 @@ export default function Home() {
         <DynamicProducts products={sampleProducts} />
       </section>
       <section>
-        <div className="parallelogram-background"></div>
+        {/* Carousel Here */}
+        <span>Carousel Here</span>
+        <CarouselStatements />
+      </section>
+      <section className="w-full">
+        <EmbedVideo />
       </section>
     </main>
   );
