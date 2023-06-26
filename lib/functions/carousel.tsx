@@ -24,9 +24,14 @@ export default function ControlledCarousel({ statements }: Props) {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect} className="my-10">
+    <Carousel
+      activeIndex={index}
+      onSelect={handleSelect}
+      className="my-10 h-[600px] flex"
+      indicators
+    >
       {statements.map((statement, idx) => (
-        <Carousel.Item key={idx}>
+        <Carousel.Item key={idx} className="flex flex-col">
           <div className="w-full">
             <div className="juliana-overlay"></div>
             <Image
@@ -38,22 +43,27 @@ export default function ControlledCarousel({ statements }: Props) {
             />
           </div>
           <Carousel.Caption>
-            <div className="flex flex-row items-center justify-center">
-              <div className="flex flex-col">
-                <Image src={Person} alt="Person" width={400} height={150} />
-              </div>
-              <div className="flex flex-col justify-left text-left ml-5">
-                <p className="text-goodpro text-5xl font-bold w-[500px]">
-                  {"”" + statement.statement + "”"}
-                </p>
-                <p className="text-carrois text-2xl">
-                  {"- " +
-                    statement.name +
-                    ", " +
-                    statement.company +
-                    " | " +
-                    statement.title}
-                </p>
+            <div className="flex items-center justify-center">
+              <div className="flex flex-row">
+                <div className="flex">
+                  <Image src={Person} alt="Person" width={300} height={150} />
+                </div>
+                <div className="flex flex-col justify-center text-left ml-[70px]">
+                  <p
+                    className="text-goodpro text-[50px] font-extrabold w-[600px]"
+                    style={{ fontWeight: "1000px" }}
+                  >
+                    {"“" + statement.statement + "”"}
+                  </p>
+                  <p className="text-carrois text-3xl">
+                    {"- " +
+                      statement.name +
+                      ", " +
+                      statement.company +
+                      " | " +
+                      statement.title}
+                  </p>
+                </div>
               </div>
             </div>
           </Carousel.Caption>

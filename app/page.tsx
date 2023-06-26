@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
 import HomeBanner from "@/lib/components/blocks/home/homeBanner";
-import DynamicProducts from "@/lib/components/blocks/home/products";
+import DynamicProducts from "@/lib/components/blocks/home/product/products";
 import CarouselStatements from "@/lib/functions/carousel";
+import Brands from "@/lib/components/blocks/home/brands";
 import Button from "@/lib/functions/button";
 import EmbedVideo from "@/lib/components/blocks/home/embedVideo";
 import Juliana from "@/public/images/juliana.png";
@@ -25,6 +26,35 @@ export default function Home() {
     },
   ];
 
+  //Sample data forbrands in HomePage
+  const sampleBrands = [
+    {
+      image: "",
+      name: "Brand",
+    },
+    {
+      image: "",
+      name: "Brand",
+    },
+    {
+      image: "",
+      name: "Brand",
+    },
+    {
+      image: "",
+      name: "Brand",
+    },
+    {
+      image: "",
+      name: "Brand",
+    },
+    {
+      image: "",
+      name: "Brand",
+    },
+  ];
+
+  // Sample data for statements in HomePage
   const sampleStatements = [
     {
       name: "Hans Tan",
@@ -93,12 +123,14 @@ export default function Home() {
       <section>
         <DynamicProducts products={sampleProducts} />
       </section>
-      <section className="h-[200px] block">
+      <section>
         {/* Carousel Here */}
-        <span>Carousel Here</span>
         <CarouselStatements statements={sampleStatements} />
       </section>
-      <section className="w-full">
+      <section>
+        <Brands brands={sampleBrands} />
+      </section>
+      <section>
         <EmbedVideo />
       </section>
     </main>
