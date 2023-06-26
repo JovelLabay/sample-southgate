@@ -34,6 +34,10 @@
   background-color: #2b2b2b;
 }
 
+.bg-rivieraparadise {
+  background-color: #06989f;
+}
+
 /*CUSTOM COLORS END*/
 
 .banner {
@@ -53,7 +57,7 @@
 
 .parallelogram-background {
   width: 90%;
-  height: 900px;
+  height: auto;
   position: relative;
   transform: skewX(-9deg);
   background-color: #2b2b2b;
@@ -73,7 +77,7 @@
 
 .parallelogram-card {
   width: 350px;
-  height: 500px;
+  height: 550px;
   position: relative;
   transform: skewX(-9deg);
   background-color: #2b2b2b;

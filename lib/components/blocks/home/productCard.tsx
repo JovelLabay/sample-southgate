@@ -11,10 +11,18 @@ type Props = {
 export default function productCard({ label, image }: Props) {
   return (
     <div className="parallelogram-card">
-      <div className="skew-x-[9deg] ml-[32px] flex flex-col">
+      <div className="flex flex-col">
         {/* Temporary image used */}
-        <Image src={Laursoo} width={285} height={400} alt="Laursoo" />
-        <span className="text-white text-goodpro text-4xl font-bold mt-5">
+        <Image
+          src={Laursoo}
+          width={350}
+          height={400}
+          alt="Laursoo"
+          objectFit="cover"
+        />
+      </div>
+      <div className="mt-5 skew-x-[9deg] ml-3">
+        <span className="text-white text-goodpro text-4xl font-bold">
           {label}
         </span>
       </div>
