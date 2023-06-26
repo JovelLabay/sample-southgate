@@ -1,3 +1,9 @@
 export default function Button({ label }: { label: string }) {
-  return <button>{label}</button>;
+  return (
+    <div className="bg-rivieraparadise inline-block mx-10">
+      <button className="my-5 mx-7 text-[25px] text-goodpro text-white">
+        {label}
+      </button>
+    </div>
+  );
 }
