@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Giorgio from "public/giorgio.png";
+import Giorgio from "public/images/giorgio.png";
 import Logo from "public/images/logo.png";
 
 export default function HomeBanner() {
