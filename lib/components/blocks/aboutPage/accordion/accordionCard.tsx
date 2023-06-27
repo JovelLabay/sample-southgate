@@ -21,7 +21,7 @@ const AccordionCard: React.FC<AccordionCardProps> = ({ question, answer }) => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col mb-5">
+    <div className="flex justify-center items-center flex-col mb-1">
       <div
         className="faq-parallelogram bg-rivieraparadise cursor-pointer"
         onClick={handleCardClick}
