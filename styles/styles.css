@@ -127,11 +127,23 @@
   height: 120px;
   position: relative;
   transform: skewX(-20deg);
+  transition: all 0.3s ease;
+}
+
+.faq-parallelogram.expanded {
+  transform: skewX(-20deg) scale(1.05);
 }
 
 .faq-details {
   width: 1161px;
   height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-details.expanded {
+  max-height: 200px; /* Adjust the value to fit your content */
 }
 
 .sideways-text {
