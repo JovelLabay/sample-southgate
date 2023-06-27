@@ -29,7 +29,7 @@ const AccordionCard: React.FC<AccordionCardProps> = ({ question, answer }) => {
         <div className="skew-x-[20deg]">
           <div className="flex flex-row m-10 text-goodpro text-3xl text-white">
             <div
-              className={`w-[100%] text-[36px] text-goodpro ${
+              className={`w-[100%] text-[36px] text-goodpro font-bold ${
                 isClicked ? "text-demonicyellow" : ""
               }`}
             >
