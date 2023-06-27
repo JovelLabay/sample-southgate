@@ -1,9 +1,17 @@
 import React from "react";
+import ProductBanner from "@/lib/components/blocks/productsPage/banner";
 
 export default async function ProductsPage() {
   return (
-    <div>
-      <h1>About Page</h1>
-    </div>
+    <main>
+      {/* Header Section */}
+      <section>
+        <ProductBanner />
+      </section>
+      {/* Menu Section */}
+      <section>
+        <div></div>
+      </section>
+    </main>
   );
 }
