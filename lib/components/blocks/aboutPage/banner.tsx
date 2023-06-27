@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Rosenke from "public/images/rosenke.png";
-import Logo from "public/images/logo.png";
 
 export default function Banner() {
   return (

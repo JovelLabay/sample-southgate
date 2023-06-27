@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Banner from "@/lib/components/blocks/aboutPage/banner";
-// import VideoJS from "@/lib/functions/videoJS";
 import Accordion from "@/lib/components/blocks/aboutPage/accordion/accordion";
 import Tyson from "@/public/images/tyson.png";
 
