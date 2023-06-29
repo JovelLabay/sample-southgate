@@ -97,6 +97,13 @@ export default async function ProductsPage() {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         image: "",
       },
+      {
+        name: "D TB AEOLUS STEERINGACE AU01",
+        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        image: "",
+      },
     ],
   };
 
