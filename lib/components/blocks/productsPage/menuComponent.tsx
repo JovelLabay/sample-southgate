@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Laursoo from "@/public/images/laursoo.png";
 import Button from "@/lib/functions/button";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 type Props = {
   menuData: {
@@ -24,10 +25,15 @@ type MenuItem = {
 export default function MenuComponent({ menuData }: Props) {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 3;
+
+  let allItems = 0;
 
   const handleClick = (category: string) => {
     setActiveCategory(category === activeCategory ? null : category);
     setSelectedItem(null);
+    setCurrentPage(1); // Reset currentPage to 1
   };
 
   const handleItemClick = (itemName: string) => {
@@ -35,9 +41,14 @@ export default function MenuComponent({ menuData }: Props) {
   };
 
   // Sort items for different categories
-  const getSortedItems = (category: string) => {
+  const getSortedItems = (category: string, page: number) => {
     const items = menuData[category] || [];
-    return items.sort((a, b) => a.name.localeCompare(b.name));
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    allItems = items.length;
+    return items
+      .slice(startIndex, endIndex)
+      .sort((a, b) => a.name.localeCompare(b.name));
   };
 
   // Sort all items by combining all category details and sorting it
@@ -47,6 +58,19 @@ export default function MenuComponent({ menuData }: Props) {
       allItems.push(...categoryItems);
     });
     return allItems.sort((a, b) => a.name.localeCompare(b.name));
+  };
+
+  // Handle pagination navigation
+  const goToPreviousPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
+  };
+
+  const goToNextPage = () => {
+    const totalPages = Math.ceil(allItems / itemsPerPage);
+
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
   };
 
   return (
@@ -120,7 +144,7 @@ export default function MenuComponent({ menuData }: Props) {
           </div>
         ) : (
           <div>
-            {getSortedItems(activeCategory).map((item) => (
+            {getSortedItems(activeCategory || "", currentPage).map((item) => (
               <div
                 key={item.name}
                 className={`item ${
@@ -155,6 +179,29 @@ export default function MenuComponent({ menuData }: Props) {
               </div>
             ))}
           </div>
+        )}
+      </div>
+      <div className="flex justify-center items-center gap-20 my-3">
+        {currentPage > 1 && (
+          <button onClick={goToPreviousPage}>
+            <div className="text-3xl">
+              <SlArrowLeft />
+            </div>
+          </button>
+        )}
+        {activeCategory === "ALL" || activeCategory === null ? (
+          <span className="text-3xl">{currentPage}</span>
+        ) : (
+          <>
+            <span>{currentPage}</span>
+          </>
+        )}
+        {getAllItems().length > itemsPerPage && (
+          <button onClick={goToNextPage}>
+            <div className="text-3xl">
+              <SlArrowRight />
+            </div>
+          </button>
         )}
       </div>
     </div>
