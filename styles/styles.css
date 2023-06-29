@@ -133,7 +133,6 @@
 .faq-details.expanded {
   max-height: 200px; /* Adjust the value to fit your content */
 }
-
 .sideways-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -141,4 +140,23 @@
   font-weight: bold;
   font-size: 18px;
   padding-right: 20px;
+}
+
+.menu-parallelogram {
+  @apply w-[90%] h-[120px] bg-rivieraparadise;
+  position: relative;
+  transform: skewX(-20deg);
+  transition: all 0.3s ease;
+}
+
+.menu-parallelogram::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: -40px;
+  width: 100px;
+  height: 100%;
+  background-color: inherit;
+  transform: skewX(8deg);
 }
