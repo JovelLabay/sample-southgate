@@ -14,7 +14,7 @@ export default function DynamicBrands({ brands }: Props) {
   return (
     <div className="flex flex-row margin-y justify-end  h-[500px]">
       <div className="-rotate-90 flex  h-[200px] w-[650px] items-start justify-center -mr-10 mt-[160px]">
-        <span className="flex text-goodpro text-[60px] font-bold w-[500px] mt-10 items-end align-bottom justify-center">
+        <span className="flex text-goodpro-bold text-[60px] w-[500px] mt-10 items-end align-bottom justify-center">
           OUR BRANDS
         </span>
       </div>

@@ -100,7 +100,7 @@ export default function Home() {
 
             <div className=" flex flex-col w">
               <div className="ml-10 w-[600px]">
-                <span className="text-demonicyellow text-goodpro text-[80px] font-extrabold">
+                <span className="text-demonicyellow text-goodpro-bold text-[80px]">
                   SOUTHGATE TAGLINE HERE
                 </span>
                 <br />
