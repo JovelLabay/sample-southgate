@@ -1,5 +1,5 @@
-import Button from "@/lib/functions/button";
 import React, { useState, FormEvent } from "react";
+import Button from "@/lib/functions/button";
 
 const ContactForm: React.FC = () => {
   const [fullName, setFullName] = useState<string>("");
@@ -79,9 +79,7 @@ const ContactForm: React.FC = () => {
             />
           </div>
           <div className="-ml-10 text-goodpro">
-            <button type="submit">
-              <Button label="SUBMIT" />
-            </button>
+            <Button label="SUBMIT" />
           </div>
         </div>
       </form>

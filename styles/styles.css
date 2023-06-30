@@ -1,4 +1,5 @@
 /* WRITE CUSTOM CSS HERE */
+@import url("https://unpkg.com/leaflet/dist/leaflet.css");
 
 /*CUSTOM FONTS START*/
 @font-face {
@@ -17,12 +18,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "FF Good Pro Bold";
+  src: local("FFGoodProUltra"),
+    url("../public/fonts/FFGoodPro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .text-carrois {
   font-family: "Carrois Gothic";
 }
 
 .text-goodpro {
   font-family: "FF Good Pro";
+}
+
+.text-goodpro-bold {
+  font-family: "FF Good Pro Bold";
 }
 
 .text-demonicyellow {
