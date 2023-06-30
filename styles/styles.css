@@ -1,4 +1,5 @@
 /* WRITE CUSTOM CSS HERE */
+@import url("https://unpkg.com/leaflet/dist/leaflet.css");
 
 /*CUSTOM FONTS START*/
 @font-face {
@@ -19,7 +20,7 @@
 
 @font-face {
   font-family: "FF Good Pro Bold";
-  src: local("FFGoodProBold"),
+  src: local("FFGoodProUltra"),
     url("../public/fonts/FFGoodPro-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -31,6 +32,10 @@
 
 .text-goodpro {
   font-family: "FF Good Pro";
+}
+
+.text-goodpro-bold {
+  font-family: "FF Good Pro Bold";
 }
 
 .text-goodpro-bold {
