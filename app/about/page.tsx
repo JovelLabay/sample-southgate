@@ -23,7 +23,7 @@ export default async function AboutPage() {
               </div>
               <div className=" flex flex-col w">
                 <div className="ml-10 w-[600px]">
-                  <span className="text-demonicyellow text-goodpro text-[80px] font-extrabold">
+                  <span className="text-demonicyellow text-goodpro-bold text-[60px]">
                     WHY CHOOSE US
                   </span>
                   <br />
@@ -62,7 +62,7 @@ export default async function AboutPage() {
               </div>
 
               <div className="ml-10 w-[600px]">
-                <span className="text-demonicyellow text-goodpro text-[80px] font-extrabold">
+                <span className="text-demonicyellow text-goodpro-bold text-[60px] font-extrabold">
                   HOW WE STARTED
                 </span>
                 <br />
