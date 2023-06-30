@@ -21,7 +21,7 @@ export default function HomeBanner() {
         <span className="text-carrois text-demonicyellow text-4xl font-light">
           Lorem Ipsum
         </span>
-        <span className="text-goodpro text-white text-7xl font-bold mt-3">
+        <span className="text-goodpro-bold text-white text-7xl mt-3">
           TECHNOLOGY MEETS <br /> PERFORMANCE
         </span>
       </div>
