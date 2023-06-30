@@ -17,12 +17,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "FF Good Pro Bold";
+  src: local("FFGoodProBold"),
+    url("../public/fonts/FFGoodPro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .text-carrois {
   font-family: "Carrois Gothic";
 }
 
 .text-goodpro {
   font-family: "FF Good Pro";
+}
+
+.text-goodpro-bold {
+  font-family: "FF Good Pro Bold";
 }
 
 .text-demonicyellow {

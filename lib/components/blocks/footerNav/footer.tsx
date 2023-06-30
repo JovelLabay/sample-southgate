@@ -36,7 +36,18 @@ export default function Footer() {
             </div>
             <div className="mt-auto flex p-10">
               @ 2023 Southgate Express Marketing Inc. Powered by &nbsp;
-              <Image src={HatchitLogo} alt="Hatchit" height={40} width={170} />
+              <a
+                href="https://www.hatchitsolutions.com/#landing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={HatchitLogo}
+                  alt="Hatchit"
+                  height={40}
+                  width={170}
+                />
+              </a>
             </div>
           </div>
         </div>
