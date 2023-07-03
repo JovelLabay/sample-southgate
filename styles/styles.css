@@ -70,23 +70,14 @@
 }
 
 .parallelogram-background {
-  width: 1600px;
-  height: auto;
-  position: relative;
-  transform: skewX(-8deg);
+  @apply sm:w-[1600px] h-auto relative sm:skew-x-[-8deg];
   background-color: #2b2b2b;
 }
 
 .parallelogram-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
+  @apply absolute top-0 -left-[40px] w-[400px] h-full skew-x-[8deg];
   z-index: -1;
-  left: -40px;
-  width: 400px;
-  height: 100%;
   background-color: inherit;
-  transform: skewX(8deg);
 }
 
 .parallelogram-card {
@@ -98,9 +89,7 @@
 }
 
 .juliana {
-  position: relative;
-  width: 350px;
-  height: auto;
+  @apply sm:w-[350px] h-auto w-[full] relative;
 }
 
 /* yellow overlay of an image */
