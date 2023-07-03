@@ -10,14 +10,14 @@ export default function Banner() {
           src={Rosenke}
           alt="Rosenke"
           className="banner"
-          style={{ height: "600px" }}
+          style={{ height: "410px" }}
         />
       </div>
-      <div className="flex flex-col items-start mt-[200px]">
-        <span className="text-carrois text-demonicyellow text-4xl font-light">
+      <div className="flex flex-col items-start mt-[100px]">
+        <span className="text-carrois text-demonicyellow text-3xl font-light">
           About Us
         </span>
-        <span className="text-goodpro text-white text-7xl font-bold mt-3">
+        <span className="text-goodpro-bold text-white text-5xl mt-3">
           GET TO KNOW THE COMPANY
         </span>
       </div>

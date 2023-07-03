@@ -17,12 +17,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "FF Good Pro Bold";
+  src: local("FFGoodProBold"),
+    url("../public/fonts/FFGoodPro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .text-carrois {
   font-family: "Carrois Gothic";
 }
 
 .text-goodpro {
   font-family: "FF Good Pro";
+}
+
+.text-goodpro-bold {
+  font-family: "FF Good Pro Bold";
 }
 
 .text-demonicyellow {
@@ -45,7 +57,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 840px;
+  height: 600px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -57,7 +69,7 @@
 }
 
 .parallelogram-background {
-  width: 90%;
+  width: 88%;
   height: auto;
   position: relative;
   transform: skewX(-8deg);
@@ -78,7 +90,7 @@
 
 .parallelogram-card {
   width: 350px;
-  height: 500px;
+  height: 460px;
   position: relative;
   transform: skewX(-9deg);
   background-color: #2b2b2b;
@@ -86,8 +98,8 @@
 
 .juliana {
   position: relative;
-  width: 485px;
-  height: 628px;
+  width: 350px;
+  height: auto;
 }
 
 /* yellow overlay of an image */
@@ -111,8 +123,8 @@
 }
 
 .faq-parallelogram {
-  width: 1161px;
-  height: 120px;
+  width: 1000px;
+  height: 70px;
   position: relative;
   transform: skewX(-20deg);
   transition: all 0.3s ease;
@@ -123,7 +135,7 @@
 }
 
 .faq-details {
-  width: 1161px;
+  width: 1000px;
   height: auto;
   max-height: 0;
   overflow: hidden;
