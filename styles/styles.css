@@ -114,8 +114,7 @@
 }
 
 .margin {
-  margin-left: 90px;
-  margin-right: 90px;
+  @apply mx-[30px] sm:mx-[90px];
 }
 
 .margin-y {
