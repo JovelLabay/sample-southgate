@@ -155,7 +155,7 @@
 }
 
 .menu-parallelogram {
-  @apply w-[90%] h-[120px] bg-rivieraparadise;
+  @apply w-[90%] h-[90px] bg-rivieraparadise;
   position: relative;
   transform: skewX(-20deg);
   transition: all 0.3s ease;
@@ -171,4 +171,12 @@
   height: 100%;
   background-color: inherit;
   transform: skewX(8deg);
+}
+
+.full-width-hr {
+  border: none;
+  height: 1px;
+  background-color: black;
+  width: 100000px;
+  margin-left: -1000px;
 }
