@@ -27,13 +27,13 @@ const Pagination: React.FC<PaginationProps> = ({
               onClick={goToPreviousPage}
               style={{ display: currentPage > 1 ? "block" : "none" }}
             >
-              <div className="text-3xl text-white m-2 block">
+              <div className="text-1xl text-white m-2 block">
                 <SlArrowLeft />
               </div>
             </button>
           </div>
           <div className="block">
-            <h3>{currentPage}</h3>
+            <h4>{currentPage}</h4>
           </div>
           <div className="block m-20 bg-rivieraparadise">
             <button
@@ -45,7 +45,7 @@ const Pagination: React.FC<PaginationProps> = ({
                     : "none",
               }}
             >
-              <div className="text-3xl text-white m-2">
+              <div className="text-1xl text-white m-2">
                 <SlArrowRight />
               </div>
             </button>
