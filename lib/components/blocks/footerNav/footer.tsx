@@ -17,15 +17,19 @@ export default function Footer() {
             alt="Southgate Express marketing Inc."
           />
         </div>
-        <div className="ml-4 pt-20 text-goodpro flex-grow">
-          <span className="block py-2 text-2xl font-bold">
+        <div className="ml-3 items-left  text-goodpro mt-[40px]">
+          <span className="block py-2 text-1xl font-bold">
             SOUTHGATE EXPRESS MARKETING INC,
           </span>
-          <span className="block text-1xl">
-            123 Street Mandaue City Philippines 6014
+          <span className="block text-[12px]">
+            Aniceto Seno Street, Banilad, Mandaue City, Philippines 6014
           </span>
-          <span className="block">mail@southgateexpress.com</span>
-          <span className="block">(032) 123 4567 +63 917 123 4567 </span>
+          <span className="block text-[12px]">sgtyre@yahoo.com.ph</span>
+          <span className="block text-[12px]">Telefax: (032) 344-8808</span>
+          <span className="block text-[12px]">Direct Line: (032)268-8818</span>
+          <span className="block text-[12px]">
+            Mobile: (032) 0917-8832858 | 0922- 8468808
+          </span>
         </div>
 
         <div className="flex flex-grow justify-end">
