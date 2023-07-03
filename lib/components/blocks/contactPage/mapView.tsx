@@ -12,13 +12,13 @@ const MapView: React.FC = () => {
       const map = new mapboxgl.Map({
         container: mapContainerRef.current,
         style: "mapbox://styles/mapbox/streets-v12",
-        center: [123.91785670559445, 10.342182298669702],
+        center: [123.928509, 10.341646],
         zoom: 18,
       });
 
       // Create a marker at the center coordinates
       const marker = new mapboxgl.Marker()
-        .setLngLat([123.91785670559445, 10.342182298669702])
+        .setLngLat([123.928509, 10.341646])
         .addTo(map);
     }
   }, []);
