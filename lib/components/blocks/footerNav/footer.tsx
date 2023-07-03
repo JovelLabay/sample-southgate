@@ -12,40 +12,44 @@ export default function Footer() {
         <div className="py-10 pr-5 justify-start">
           <Image
             src={Logo}
-            width={200}
+            width={130}
             height={100}
             alt="Southgate Express marketing Inc."
           />
         </div>
-        <div className="ml-4 pt-20 text-goodpro flex-grow">
-          <span className="block py-2 text-2xl font-bold">
+        <div className="ml-3 items-left  text-goodpro mt-[50px]">
+          <span className="block py-2 text-1xl font-bold">
             SOUTHGATE EXPRESS MARKETING INC,
           </span>
-          <span className="block text-1xl">
+          <span className="block text-[12px]">
             123 Street Mandaue City Philippines 6014
           </span>
-          <span className="block">mail@southgateexpress.com</span>
-          <span className="block">(032) 123 4567 +63 917 123 4567 </span>
+          <span className="block text-[12px]">mail@southgateexpress.com</span>
+          <span className="block text-[12px]">
+            (032) 123 4567 +63 917 123 4567{" "}
+          </span>
         </div>
 
         <div className="flex flex-grow justify-end">
           <div className="flex flex-col items-end">
             <div className="p-10 flex gap-3">
-              <Image src={FacebookLogo} alt="Facebook" height={15} width={70} />
-              <Image src={YoutubeLogo} alt="Facebook" height={15} width={45} />
+              <Image src={FacebookLogo} alt="Facebook" height={10} width={60} />
+              <Image src={YoutubeLogo} alt="Youtube" height={10} width={40} />
             </div>
-            <div className="mt-auto flex p-10">
-              @ 2023 Southgate Express Marketing Inc. Powered by &nbsp;
+            <div className="mt-auto flex p-3">
+              <span className="text-[12px]">
+                @ 2023 Southgate Express Marketing Inc. Powered by
+              </span>
+              &nbsp;
               <a
-                href="https://www.hatchitsolutions.com/#landing"
-                target="_blank"
+                href="https://hatchitsolutions.com/#landing"
                 rel="noopener noreferrer"
               >
                 <Image
                   src={HatchitLogo}
                   alt="Hatchit"
-                  height={40}
-                  width={170}
+                  height={30}
+                  width={140}
                 />
               </a>
             </div>
