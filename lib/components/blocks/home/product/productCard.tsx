@@ -21,7 +21,7 @@ export default function productCard({ label, image }: Props) {
           objectFit="cover"
         />
       </div>
-      <div className="mt-5 skew-x-[9deg] ml-3">
+      <div className="mt-3 skew-x-[9deg] ml-3">
         <span className="text-white text-goodpro text-4xl font-bold">
           {label}
         </span>

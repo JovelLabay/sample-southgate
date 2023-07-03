@@ -23,7 +23,7 @@ export default function Accordion() {
   return (
     <div className="flex justify-center items-center">
       <div className="sideways-text justify-end mt-20 items-center h-[500px] flex">
-        <h1 className="text-goodpro text-[60px] font-extrabold">{"FAQ's"}</h1>
+        <h1 className="text-goodpro-bold text-[60px]">{"FAQ's"}</h1>
       </div>
       <div className="flex flex-col margin justify-center items-center margin-y gap-5">
         {accordionData.map((data, index) => (
