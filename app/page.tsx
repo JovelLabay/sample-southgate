@@ -99,8 +99,8 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-center">
-              <div className="sm:ml-10 w-auto sm:w-[550px] text-center sm:text-left">
-                <span className="text-demonicyellow text-1xl sm:text-4xl font-bold">
+              <div className="sm:ml-10 w-auto sm:w-[550px] text-center sm:text-left my-3 sm:my-0">
+                <span className="text-demonicyellow text-[20px] sm:text-4xl font-bold ">
                   SOUTHGATE TAGLINE HERE
                 </span>
                 <br />
