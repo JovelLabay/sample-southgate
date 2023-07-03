@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
-import Nilsson from "public/images/nilsson.png";
+import Pinto from "public/images/pinto.png";
 
 export default function Banner() {
   return (
     <div className="margin">
       <div className="flex items-center ">
         <Image
-          src={Nilsson}
-          alt="Nilsson"
+          src={Pinto}
+          alt="Pinto"
           className="banner"
           style={{ height: "380px" }}
         />
