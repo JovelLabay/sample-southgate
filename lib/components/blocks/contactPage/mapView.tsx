@@ -27,7 +27,7 @@ const MapView: React.FC = () => {
     <div
       className="flex -ml-[250px]"
       ref={mapContainerRef}
-      style={{ width: "77%", height: "700px" }}
+      style={{ width: "71%", height: "700px" }}
     />
   );
 };

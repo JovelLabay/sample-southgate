@@ -19,7 +19,7 @@ export default async function ContactPage() {
       <section>
         <div className="w-full flex flex-row items-center justify-left h-auto margin-y -ml-[100px]">
           <div className="flex items-center justify-end -rotate-90 w-[700px] -ml-[100px]">
-            <span className="text-goodpro-bold text-[60px] transform -translate-x-2xl">
+            <span className="text-goodpro-bold text-[50px] transform -translate-x-2xl">
               FIND US
             </span>
           </div>
