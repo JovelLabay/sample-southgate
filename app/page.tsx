@@ -90,7 +90,7 @@ export default function Home() {
         <HomeBanner />
       </section>
       {/* Image Section */}
-      <section className="flex flex-col mt-[90px] text-white">
+      <section className="flex flex-col mt-[70px] text-white">
         <div className="parallelogram-background">
           <div className="skew-x-[9deg] flex margin items-center w-full h-full my-[70px] margin-y">
             <div className="juliana">
@@ -99,12 +99,12 @@ export default function Home() {
             </div>
 
             <div className=" flex flex-col w">
-              <div className="ml-10 w-[600px]">
-                <span className="text-demonicyellow text-goodpro-bold text-[80px]">
+              <div className="ml-10 w-[550px]">
+                <span className="text-demonicyellow text-goodpro-bold text-[50px]">
                   SOUTHGATE TAGLINE HERE
                 </span>
                 <br />
-                <span className="text-carrois text-3xl">
+                <span className="text-carrois text-2xl">
                   Lorem ipsum dolor sit amet, consectetur <br /> adipiscing
                   elit, sed do eiusmod tempor incididunt ut labore et dolore
                   magna aliqua. Ut enim ad minim veniam, quis nostrud

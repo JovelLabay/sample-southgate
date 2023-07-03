@@ -28,7 +28,7 @@ export default function DynamicProducts({ products }: Props) {
           ))}
         </div>
       </div>
-      <div className=" flex justify-end mr-[1355px] w-5xl mt-3">
+      <div className=" flex justify-end mr-[1380px] w-5xl mt-3">
         <Button label="SEE DETAILS" />
       </div>
     </div>

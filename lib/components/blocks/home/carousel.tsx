@@ -54,13 +54,10 @@ export default function ControlledCarousel({ statements }: Props) {
                   </div>
                 </div>
                 <div className="flex flex-col justify-center text-left ml-[70px]">
-                  <p
-                    className="text-goodpro-bold text-[50px] w-[600px]"
-                    style={{ fontWeight: "1000px" }}
-                  >
+                  <p className="text-goodpro-bold text-[50px] w-[600px]">
                     {"“" + statement.statement + "”"}
                   </p>
-                  <p className="text-carrois text-3xl">
+                  <p className="text-carrois text-2xl">
                     {"- " +
                       statement.name +
                       ", " +
