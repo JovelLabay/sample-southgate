@@ -25,13 +25,13 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="parallelogram-background mt-[100px]">
+    <div className="parallelogram-background mt-[70px]">
       <form
         onSubmit={handleSubmit}
         className="margin text-white skew-x-[8deg] flex flex-col text-carrois"
       >
         <div className="margin-y gap-8 flex flex-col">
-          <div className="flex flex-col text-3xl">
+          <div className="flex flex-col text-2xl">
             <label htmlFor="fullName" className="mb-2">
               Full Name:
             </label>
@@ -40,10 +40,10 @@ const ContactForm: React.FC = () => {
               id="fullName"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
-              className="text-black h-20"
+              className="text-black h-[60px] w-[90%]"
             />
           </div>
-          <div className="flex flex-col text-3xl">
+          <div className="flex flex-col text-2xl">
             <label htmlFor="email" className="mb-2">
               Email Address:
             </label>
@@ -52,10 +52,10 @@ const ContactForm: React.FC = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="text-black h-20"
+              className="text-black h-[60px] w-[90%]"
             />
           </div>
-          <div className="flex flex-col text-3xl">
+          <div className="flex flex-col text-2xl">
             <label htmlFor="contactNumber" className="mb-2">
               Contact Number:
             </label>
@@ -64,10 +64,10 @@ const ContactForm: React.FC = () => {
               id="contactNumber"
               value={contactNumber}
               onChange={(e) => setContactNumber(e.target.value)}
-              className="text-black h-20"
+              className="text-black h-[60px] w-[90%]"
             />
           </div>
-          <div className="flex flex-col text-3xl">
+          <div className="flex flex-col text-2xl">
             <label htmlFor="message" className="mb-2">
               Message:
             </label>
@@ -75,7 +75,7 @@ const ContactForm: React.FC = () => {
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="text-black h-[200px]"
+              className="text-black h-[200px] w-[90%]"
             />
           </div>
           <div className="-ml-10 text-goodpro">
