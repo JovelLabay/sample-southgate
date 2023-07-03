@@ -123,8 +123,8 @@
 }
 
 .faq-parallelogram {
-  width: 1161px;
-  height: 120px;
+  width: 1000px;
+  height: 70px;
   position: relative;
   transform: skewX(-20deg);
   transition: all 0.3s ease;
@@ -135,7 +135,7 @@
 }
 
 .faq-details {
-  width: 1161px;
+  width: 1000px;
   height: auto;
   max-height: 0;
   overflow: hidden;
