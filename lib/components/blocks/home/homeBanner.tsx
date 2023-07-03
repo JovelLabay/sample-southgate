@@ -9,19 +9,19 @@ export default function HomeBanner() {
       <div className="flex items-center">
         <Image src={Giorgio} alt="Giorgio" className="banner" />
       </div>
-      <div className="py-10 justify-start mt-[80px]">
+      <div className="py-8 justify-start mt-[60px]">
         <Image
           src={Logo}
           alt="Southgate Express marketing Inc."
-          width={200}
-          height={100}
+          width={130}
+          height={70}
         />
       </div>
       <div className="flex flex-col items-start ">
-        <span className="text-carrois text-demonicyellow text-4xl font-light">
+        <span className="text-carrois text-demonicyellow text-3xl font-light">
           Lorem Ipsum
         </span>
-        <span className="text-goodpro-bold text-white text-7xl mt-3">
+        <span className="text-goodpro-bold text-white text-5xl mt-3">
           TECHNOLOGY MEETS <br /> PERFORMANCE
         </span>
       </div>
