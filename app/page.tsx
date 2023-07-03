@@ -90,8 +90,8 @@ export default function Home() {
         <HomeBanner />
       </section>
       {/* Image Section */}
-      <section className="flex flex-col mt-[70px] text-white">
-        <div className="parallelogram-background">
+      <section>
+        <div className="parallelogram-background flex flex-col mt-[70px] text-white">
           <div className="skew-x-[9deg] flex margin items-center w-full h-full my-[70px] margin-y">
             <div className="juliana">
               <div className="juliana-overlay"></div>
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
 
             <div className=" flex flex-col">
-              <div className="ml-10 w-[650px]">
+              <div className="ml-10 w-[550px]">
                 <span className="text-demonicyellow text-goodpro-bold text-[50px]">
                   SOUTHGATE TAGLINE HERE
                 </span>
@@ -123,9 +123,7 @@ export default function Home() {
         </div>
       </section>
       {/* Products Section */}
-      <section>
-        <DynamicProducts products={sampleProducts} />
-      </section>
+      <section>{/* <DynamicProducts products={sampleProducts} /> */}</section>
       <section>
         {/* Carousel Here */}
         <CarouselStatements statements={sampleStatements} />
