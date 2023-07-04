@@ -49,7 +49,7 @@ export default function ControlledCarousel({ statements }: Props) {
             <div className="flex items-center justify-center">
               <div className="flex flex-col sm:flex-row">
                 <div className="flex justify-center items-center w-auto sm:h-[450px]">
-                  <div className="flex items-center justify-center w-full sm:h-[450px] h-fit sm:w-[300px]">
+                  <div className="flex items-center justify-center w-full sm:h-[450px] h-[250px] sm:w-[300px]">
                     <Image
                       src={Person}
                       alt="Person"
