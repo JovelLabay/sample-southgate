@@ -13,14 +13,14 @@ type Props = {
 
 export default function DynamicProducts({ products }: Props) {
   return (
-    <div className="flex flex-col justify-end w-auto margin-y overflow-hidden">
-      <div className="flex flex-row justify-end ">
+    <div className="sm:flex sm:flex-col block justify-end w-auto margin-y overflow-hidden">
+      <div className="flex flex-col sm:flex-row sm:justify-end ">
         <div className="flex  h-auto w-auto justify-center items-center">
-          <span className="-rotate-90 flex text-goodpro-bold text-[55px] items-end align-bottom justify-center">
+          <span className="sm:-rotate-90 flex text-goodpro-bold text-[40px] sm:text-[55px] items-end align-bottom justify-center">
             OUR PRODUCTS
           </span>
         </div>
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
           {products.map((product, index) => (
             <div key={index} className="flex flex-col">
               <ProductCard label={product.label} image="" />
