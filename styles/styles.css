@@ -85,8 +85,8 @@
 }
 
 .parallelogram-card {
-  width: 350px;
-  height: 460px;
+  width: 250px;
+  height: 360px;
   position: relative;
   transform: skewX(-9deg);
   background-color: #2b2b2b;
