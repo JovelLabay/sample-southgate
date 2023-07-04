@@ -99,12 +99,12 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-center">
-              <div className="sm:ml-10 w-auto sm:w-[550px] text-center sm:text-left my-3 sm:my-0">
-                <span className="text-demonicyellow text-[20px] sm:text-4xl font-bold ">
+              <div className="sm:ml-10 sm:w-[600px] h-auto w-fit flex  flex-col sm:block justify-center items-center sm:justify-start my-3 sm:my-0 ">
+                <span className="text-demonicyellow text-[20px] sm:text-5xl font-bold text-center">
                   SOUTHGATE TAGLINE HERE
                 </span>
                 <br />
-                <span className="text-carrois text-[15px] sm:text-2xl">
+                <span className="text-carrois text-15px sm:text-2xl text-center">
                   Southgate Express Marketing, Inc. is presently one of the
                   leaders in importation and distribution of tires in the
                   Philippines. It was established in August 1999 and has been
@@ -115,7 +115,7 @@ export default function Home() {
                   Visayas and Mindanao.
                 </span>
               </div>
-              <div className="mt-3">
+              <div className="mt-3 justify-center w-full text-center flex sm:justify-start">
                 <Button label="KNOW MORE" />
               </div>
             </div>

@@ -49,8 +49,8 @@ export default function ControlledCarousel({ statements }: Props) {
             <div className="flex items-center justify-center">
               <div className="flex flex-row">
                 <div className="flex justify-center items-center">
-                  <div className="flex items-center justify-center">
-                    <Image src={Person} alt="Person" width={300} height={150} />
+                  <div className="flex items-center justify-center w-[300px]">
+                    <Image src={Person} alt="Person" />
                   </div>
                 </div>
                 <div className="flex flex-col justify-center text-left ml-[70px]">
