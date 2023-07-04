@@ -91,7 +91,7 @@ export default function Home() {
       </section>
       {/* Image Section */}
       <section>
-        <div className="parallelogram-background flex sm:flex-col mt-[70px] text-white">
+        <div className="parallelogram-background flex sm:flex-col mt-[70px] text-white justify-center">
           <div className="sm:skew-x-[8deg] sm:flex margin items-center w-full h-full my-[70px] margin-y">
             <div className="juliana">
               <div className="juliana-overlay"></div>

@@ -8,8 +8,9 @@ import YoutubeLogo from "public/images/yt_logo.png";
 export default function Footer() {
   return (
     <div className="bg-darkcharcoal text-white flex">
-      <div className="flex align-center w-full margin">
-        <div className="py-10 pr-5 justify-start">
+      <div className="flex align-center w-full margin sm:flex-row flex-col ">
+        {/* Logo Image */}
+        <div className="py-2 sm:py-10 flex sm:relative justify-center items-center w-full">
           <Image
             src={Logo}
             width={130}
@@ -17,7 +18,8 @@ export default function Footer() {
             alt="Southgate Express marketing Inc."
           />
         </div>
-        <div className="ml-3 items-left  text-goodpro mt-[40px]">
+        {/* Details */}
+        <div className="sm:ml-3 sm:items-left flex flex-col text-goodpro justify-center items-center sm:items-start sm:text-left">
           <span className="block py-2 text-1xl font-bold">
             SOUTHGATE EXPRESS MARKETING INC,
           </span>
@@ -32,14 +34,14 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="flex flex-grow justify-end">
+        <div className="flex sm:flex-grow justify-end">
           <div className="flex flex-col items-end">
-            <div className="p-10 flex gap-3">
+            <div className="p-3 sm:p-10 flex gap-3 w-full justify-center sm:justify-end">
               <Image src={FacebookLogo} alt="Facebook" height={10} width={60} />
               <Image src={YoutubeLogo} alt="Youtube" height={10} width={40} />
             </div>
-            <div className="mt-auto flex p-3">
-              <span className="text-[12px]">
+            <div className="mt-auto flex p-3 sm:flex-row flex-col justify-center items-center">
+              <span className="text-[12px] text-center">
                 @ 2023 Southgate Express Marketing Inc. Powered by
               </span>
               &nbsp;
