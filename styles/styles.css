@@ -79,8 +79,8 @@
 }
 
 .parallelogram-background::before {
-  @apply absolute top-0 -left-[40px] w-[400px] h-full skew-x-[8deg];
-  z-index: -1;
+  @apply sm:absolute sm:top-0 sm:-left-[40px] sm:w-[400px] sm:h-full sm:skew-x-[8deg];
+  content: "";
   background-color: inherit;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .juliana {
-  @apply sm:w-[350px] h-auto w-[full] relative;
+  @apply sm:w-[470px] h-auto w-fit relative;
 }
 
 /* yellow overlay of an image */
