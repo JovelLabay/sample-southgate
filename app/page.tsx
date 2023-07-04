@@ -123,7 +123,9 @@ export default function Home() {
         </div>
       </section>
       {/* Products Section */}
-      <section>{/* <DynamicProducts products={sampleProducts} /> */}</section>
+      <section>
+        <DynamicProducts products={sampleProducts} />
+      </section>
       <section>
         {/* Carousel Here */}
         <CarouselStatements statements={sampleStatements} />
