@@ -137,11 +137,11 @@
 }
 
 .margin {
-  @apply mx-[30px] sm:mx-[90px];
+  @apply mx-[30px] sm:mx-[40px] lg:mx-[90px];
 }
 
 .margin-y {
-  @apply my-[40px] sm:my-[110px];
+  @apply my-[40px] sm:my-[70px] lg:my-[110px];
 }
 
 .faq-parallelogram {
