@@ -73,6 +73,21 @@
   filter: brightness(0.5);
 }
 
+.banner-products {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
 .parallelogram-background {
   @apply sm:w-[90%] h-auto relative sm:skew-x-[-8deg];
   background-color: #2b2b2b;
@@ -147,7 +162,7 @@
 }
 
 .menu-parallelogram {
-  @apply w-full h-[40px] sm:w-[90%] sm:h-[90px] bg-rivieraparadise sm:transform sm:skew-x-[-20deg ];
+  @apply w-full h-[40px] sm:w-[90%] sm:h-[90px] bg-rivieraparadise sm:transform sm:skew-x-[-20deg];
   position: relative;
 }
 
