@@ -17,9 +17,9 @@ export default async function ContactPage() {
       </section>
       {/* Google Maps */}
       <section>
-        <div className="w-full flex flex-row items-center justify-left h-auto margin-y -ml-[100px]">
-          <div className="flex items-center justify-end -rotate-90 w-[700px] -ml-[100px]">
-            <span className="text-goodpro-bold text-[50px] transform -translate-x-2xl">
+        <div className="w-full flex flex-col sm:flex-row items-center justify-left h-auto margin-y -ml-[100px]">
+          <div className="flex items-center justify-end sm:-rotate-90 w-full sm:w-[700px] sm:-ml-[100px]">
+            <span className="text-goodpro-bold text-[20px] sm:text-[50px] sm:transform sm:-translate-x-2xl">
               FIND US
             </span>
           </div>
