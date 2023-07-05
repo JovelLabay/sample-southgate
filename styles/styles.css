@@ -74,10 +74,10 @@
 }
 
 .banner-products {
+  @apply h-[300px] sm:h-[380px];
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -184,4 +184,8 @@
   background-color: black;
   width: 100000px;
   margin-left: -1000px;
+}
+
+.text-align {
+  @apply sm:text-left text-center;
 }

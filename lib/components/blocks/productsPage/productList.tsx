@@ -23,41 +23,43 @@ const ProductList: React.FC<ProductListProps> = ({
 }) => {
   return (
     <div className="flex flex-col w-auto h-auto margin">
-      {/* Category Choice */}
-      <div>
-        {/* Other Categories */}
-        {getSortedItems(activeCategory || "").map((item) => (
-          <>
-            <div
-              key={item.name}
-              className={`item py-[50px] ${
-                selectedItem === item.name ? "selected" : ""
-              }`}
-            >
-              <div className="flex flex-row my-5">
-                <Image src={Laursoo} alt="Laursoo" width={700} height={700} />
-                <div className="flex flex-col ml-10 justify-center items-left w-auto">
-                  <h3 className="text-goodpro font-extrabold text-[40px]">
+      {/* Other Categories */}
+      {getSortedItems(activeCategory || "").map((item) => (
+        <>
+          <div
+            key={item.name}
+            className={`item p-[20px] sm:py-[50px] flex ${
+              selectedItem === item.name ? "selected" : ""
+            }`}
+          >
+            <div className="flex flex-col sm:flex-row my-5 justify-center items-center">
+              <Image
+                src={Laursoo}
+                alt="Laursoo"
+                className="h-full w-full sm:w-auto"
+              />
+              <div className="flex flex-col sm:ml-10 justify-center sm:items-start w-full sm:w-[70%]">
+                <div className="w-full flex justify-center sm:justify-start">
+                  <h3 className="text-goodpro-bold text-[25px] sm:text-[40px] w-full text-align">
                     {item.name}
                   </h3>
-                  <span className="text-goodpro -mt-2 text-[18px]">
-                    {item.label.toUpperCase()}
-                  </span>
-                  <div className="w-[85%]">
-                    <p className="text-carrois mt-3 text-[25px]">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="-ml-10">
-                    <Button label="DOWNLOAD BROCHURE" />
-                  </div>
+                </div>
+                <div className="text-goodpro -mt-2 text-[12px] sm:text-[18px] w-full text-align">
+                  {item.label.toUpperCase()}
+                </div>
+                <div className="w-full flex justify-center sm:justify-start text-carrois mt-3 text-[15px] sm:text-[25px] text-align">
+                  {item.description}
+                </div>
+
+                <div className="sm:-ml-10 mt-3 w-full justify-center sm:justify-start text-align">
+                  <Button label="DOWNLOAD BROCHURE" />
                 </div>
               </div>
             </div>
-            <hr className="m-0" />
-          </>
-        ))}
-      </div>
+          </div>
+          <hr className="full-width-hr" />
+        </>
+      ))}
     </div>
   );
 };
