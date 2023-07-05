@@ -21,7 +21,7 @@ const Pagination: React.FC<PaginationProps> = ({
   return (
     <>
       {allItems / 3 > 1 ? (
-        <div className="flex justify-center items-center gap-20 my-3">
+        <div className="flex justify-center items-center gap-2 my-3">
           <div className="block m-20 bg-rivieraparadise">
             <button
               onClick={goToPreviousPage}
