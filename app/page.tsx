@@ -92,19 +92,23 @@ export default function Home() {
       {/* Image Section */}
       <section>
         <div className="parallelogram-background flex sm:flex-col mt-[70px] text-white justify-center">
-          <div className="sm:skew-x-[8deg] sm:flex margin items-center w-full h-full my-[70px] margin-y">
-            <div className="juliana">
+          <div className="sm:skew-x-[8deg] sm:flex margin items-center sm:w[700px] lg:w-[1000px] h-full my-[70px] margin-y">
+            <div className="juliana h-full w-auto">
               <div className="juliana-overlay"></div>
-              <Image src={Juliana} alt="Juliana Photo" />
+              <Image
+                src={Juliana}
+                alt="Juliana Photo"
+                className="w-auto h-auto"
+              />
             </div>
 
             <div className="flex flex-col items-center">
-              <div className="sm:ml-10 sm:w-[500px] h-auto w-fit flex  flex-col sm:block justify-center items-center sm:justify-start my-3 sm:my-0 ">
-                <span className="text-demonicyellow text-[20px] sm:text-5xl font-bold text-center">
+              <div className="sm:ml-10 sm:w-[400px] lg:w-[500px] h-auto w-fit flex  flex-col sm:block justify-center items-center sm:justify-start my-3 sm:my-0 ">
+                <span className="text-demonicyellow text-[20px] sm:text-2xl lg:text-5xl font-bold text-center">
                   SOUTHGATE TAGLINE HERE
                 </span>
                 <br />
-                <span className="text-carrois text-15px sm:text-2xl text-center">
+                <span className="text-carrois text-15px sm:text-1xl lg:text-2xl text-center">
                   Southgate Express Marketing, Inc. is presently one of the
                   leaders in importation and distribution of tires in the
                   Philippines. It was established in August 1999 and has been
