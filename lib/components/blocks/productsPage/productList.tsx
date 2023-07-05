@@ -54,7 +54,7 @@ const ProductList: React.FC<ProductListProps> = ({
                 </div>
               </div>
             </div>
-            <hr className="full-width-hr" />
+            <hr className="m-0" />
           </>
         ))}
       </div>
