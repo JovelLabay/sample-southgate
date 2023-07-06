@@ -1,4 +1,5 @@
 /* WRITE CUSTOM CSS HERE */
+@import url("https://unpkg.com/leaflet/dist/leaflet.css");
 
 /*CUSTOM FONTS START*/
 @font-face {

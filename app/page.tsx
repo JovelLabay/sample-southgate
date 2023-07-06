@@ -99,17 +99,20 @@ export default function Home() {
             </div>
 
             <div className=" flex flex-col">
-              <div className="ml-10 w-[550px]">
+              <div className="ml-10 w-[650px]">
                 <span className="text-demonicyellow text-goodpro-bold text-[50px]">
                   SOUTHGATE TAGLINE HERE
                 </span>
                 <br />
                 <span className="text-carrois text-2xl">
-                  Lorem ipsum dolor sit amet, consectetur <br /> adipiscing
-                  elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat.
+                  Southgate Express Marketing, Inc. is presently one of the
+                  leaders in importation and distribution of tires in the
+                  Philippines. It was established in August 1999 and has been
+                  the sole agent of Aeolus Brand Tires in the country since
+                  then. Southgate propelled the Aeolus brand as a primary
+                  imported tire brand in the Philippines capturing significant
+                  market share and establishing the “Aeolus” brand across Luzon,
+                  Visayas and Mindanao.
                 </span>
               </div>
               <div className="mt-3">
