@@ -1,6 +1,7 @@
 // STYLES
 import "../styles/globals.css";
 import "../styles/styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Fonts
 import { Inter } from "next/font/google";
@@ -23,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-yellow-50`}>
+      <body className={`${inter.className}`}>
         <Nav />
         {children}
         <Footer />
