@@ -98,7 +98,7 @@ export default function Home() {
               <Image src={Juliana} alt="Juliana Photo" />
             </div>
 
-            <div className=" flex flex-col w">
+            <div className=" flex flex-col">
               <div className="ml-10 w-[550px]">
                 <span className="text-demonicyellow text-goodpro-bold text-[50px]">
                   SOUTHGATE TAGLINE HERE
