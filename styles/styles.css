@@ -69,38 +69,72 @@
   filter: brightness(0.5);
 }
 
+.banner-products {
+  @apply h-[300px] sm:h-[380px];
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
+.banner-contacts {
+  @apply h-[300px] sm:h-[410px];
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
 .parallelogram-background {
-  width: 88%;
-  height: auto;
-  position: relative;
-  transform: skewX(-8deg);
+  @apply sm:w-[90%] h-auto relative sm:skew-x-[-8deg];
   background-color: #2b2b2b;
 }
 
 .parallelogram-background::before {
+  @apply sm:absolute sm:top-0 sm:-left-[40px] sm:w-[400px] sm:h-full sm:skew-x-[8deg];
   content: "";
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  left: -40px;
-  width: 400px;
-  height: 100%;
   background-color: inherit;
-  transform: skewX(8deg);
+}
+
+.parallelogram-background-about {
+  @apply sm:w-[85%] h-auto relative sm:skew-x-[-3deg] lg:skew-x-[-8deg];
+  background-color: #2b2b2b;
+}
+
+.parallelogram-background-about::before {
+  @apply sm:absolute sm:top-0 sm:-left-[40px] sm:w-[400px] sm:h-full sm:skew-x-[3deg] lg:skew-x-[8deg];
+  content: "";
+  background-color: inherit;
 }
 
 .parallelogram-card {
-  width: 350px;
-  height: 460px;
+  width: 250px;
+  height: 360px;
   position: relative;
   transform: skewX(-9deg);
   background-color: #2b2b2b;
 }
 
 .juliana {
-  position: relative;
-  width: 350px;
-  height: auto;
+  @apply h-full w-auto relative;
+}
+
+.juliana-about {
+  @apply md:h-[300px] lg:h-full h-[300px] w-auto relative;
 }
 
 /* yellow overlay of an image */
@@ -114,18 +148,15 @@
 }
 
 .margin {
-  margin-left: 90px;
-  margin-right: 90px;
+  @apply mx-[30px] sm:mx-[40px] lg:mx-[90px];
 }
 
 .margin-y {
-  margin-top: 110px;
-  margin-bottom: 110px;
+  @apply my-[40px] sm:my-[70px] lg:my-[110px];
 }
 
 .faq-parallelogram {
-  width: 1000px;
-  height: 70px;
+  @apply lg:h-[70px] w-[80%] md:h-[50px];
   position: relative;
   transform: skewX(-20deg);
   transition: all 0.3s ease;
@@ -136,7 +167,7 @@
 }
 
 .faq-details {
-  width: 1000px;
+  width: 80%;
   height: auto;
   max-height: 0;
   overflow: hidden;
@@ -147,8 +178,6 @@
   max-height: 200px; /* Adjust the value to fit your content */
 }
 .sideways-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
@@ -156,10 +185,8 @@
 }
 
 .menu-parallelogram {
-  @apply w-[90%] h-[90px] bg-rivieraparadise;
+  @apply w-full h-[40px] sm:w-[90%] sm:h-[90px] bg-rivieraparadise sm:transform sm:skew-x-[-20deg];
   position: relative;
-  transform: skewX(-20deg);
-  transition: all 0.3s ease;
 }
 
 .menu-parallelogram::before {
@@ -180,4 +207,8 @@
   background-color: black;
   width: 100000px;
   margin-left: -1000px;
+}
+
+.text-align {
+  @apply sm:text-left text-center;
 }

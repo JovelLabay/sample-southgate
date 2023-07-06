@@ -12,22 +12,22 @@ export default async function AboutPage() {
         <Banner />
       </section>
 
-      <section className="flex flex-col mt-[60px] text-white">
-        {/* First Portion */}
-        <div className="parallelogram-background ">
-          <div className="skew-x-[8deg] flex margin w-full h-full my-[70px] flex-col gap-[100px]">
-            <div className="flex items-center">
-              <div className="juliana">
+      <section>
+        <div className="parallelogram-background-about flex sm:flex-col mt-[70px] text-white">
+          <div className="sm:skew-x-[3deg] lg:skew-x-[8deg] flex sm:justify-start justify-center margin w-full h-full my-[70px] flex-col gap-[50px] sm:gap-[100px]">
+            {/* First Portion */}
+            <div className="flex items-center flex-col sm:flex-row">
+              <div className="juliana-about h-auto w-auto ">
                 <div className="juliana-overlay"></div>
                 <Image src={Tyson} alt="Tyson Photo" />
               </div>
-              <div className=" flex flex-col ">
-                <div className="ml-10 w-[600px] flex flex-col">
-                  <span className="text-demonicyellow text-goodpro-bold text-[50px]">
+              <div className=" flex flex-col w-fit">
+                <div className="sm:ml-10 w-fit md:w-[300px] lg:w-[600px] flex flex-col items-center sm:items-start">
+                  <span className="text-demonicyellow text-goodpro-bold lg:text-[50px] md:text-[30px] text-[20px]">
                     HOW WE STARTED
                   </span>
                   <br />
-                  <span className="text-carrois text-2xl">
+                  <span className="text-carrois text-[15px] md:text-[18px] lg:text-2xl">
                     <p>
                       In 2017, Southgate formally launched its direct
                       importation and distributorship of the Italian Brand
@@ -51,7 +51,7 @@ export default async function AboutPage() {
             </div>
 
             {/* Second Portion (video) */}
-            <div className="flex">
+            <div className="flex sm:justify-start justify-center">
               <video
                 src="/videos/southgate.mp4"
                 width="80%"
@@ -61,19 +61,19 @@ export default async function AboutPage() {
             </div>
 
             {/* Third portion */}
-            <div className="flex items-center">
-              <div className="juliana">
+            <div className="flex items-center flex-col sm:flex-row ">
+              <div className="juliana-about h-auto">
                 <div className="juliana-overlay"></div>
                 <Image src={Tyson} alt="Tyson Photo" />
               </div>
 
-              <div className=" flex flex-col ">
-                <div className="ml-10 w-[600px] flex flex-col">
-                  <span className="text-demonicyellow text-goodpro-bold text-[50px]">
+              <div className=" flex flex-col items-center">
+                <div className="sm:ml-10 w-fit md:w-[200px] lg:w-[500px] flex flex-col items-center sm:items-start">
+                  <span className="text-demonicyellow text-goodpro-bold lg:text-[50px] md:text-[30px] text-[20px]">
                     WHY CHOOSE US
                   </span>
                   <br />
-                  <span className="text-carrois text-2xl">
+                  <span className="text-carrois text-[15px] md:text-[18px] lg:text-2xl">
                     <p>
                       Together with its dynamic marketing approach and strong
                       AFTERSALES support, Southgate has built a very formidable

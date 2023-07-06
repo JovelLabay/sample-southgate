@@ -13,13 +13,7 @@ export default function productCard({ label, image }: Props) {
     <div className="parallelogram-card">
       <div className="flex flex-col">
         {/* Temporary image used */}
-        <Image
-          src={Laursoo}
-          width={350}
-          height={400}
-          alt="Laursoo"
-          objectFit="cover"
-        />
+        <Image src={Laursoo} alt="Laursoo" className="w-auto h-auto" />
       </div>
       <div className="mt-3 skew-x-[9deg] ml-3">
         <span className="text-white text-goodpro text-4xl font-bold">

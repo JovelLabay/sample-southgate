@@ -47,17 +47,21 @@ export default function ControlledCarousel({ statements }: Props) {
           </div>
           <Carousel.Caption className="flex items-center justify-center mb-8">
             <div className="flex items-center justify-center">
-              <div className="flex flex-row">
-                <div className="flex justify-center items-center">
-                  <div className="flex items-center justify-center">
-                    <Image src={Person} alt="Person" width={300} height={150} />
+              <div className="flex flex-col sm:flex-row">
+                <div className="flex justify-center items-center w-auto sm:h-[450px]">
+                  <div className="flex items-center justify-center w-full sm:h-[450px] h-[250px] sm:w-[300px]">
+                    <Image
+                      src={Person}
+                      alt="Person"
+                      className="h-full w-auto"
+                    />
                   </div>
                 </div>
-                <div className="flex flex-col justify-center text-left ml-[70px]">
-                  <p className="text-goodpro-bold text-[50px] w-[600px]">
+                <div className="sm:flex block flex-col justify-center sm:ml-70px sm:w-[700px] w-fit">
+                  <p className="text-goodpro-bold text-[25px] sm:text-[50px] flex sm:text-left w-fit sm:w-[600px] sm:justify-start  sm:ml-10">
                     {"“" + statement.statement + "”"}
                   </p>
-                  <p className="text-carrois text-2xl">
+                  <p className="text-carrois text-1xl text-center sm:justify-start sm:flex sm:ml-10 sm:text-2xl">
                     {"- " +
                       statement.name +
                       ", " +
