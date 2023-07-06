@@ -40,14 +40,14 @@ const ProductList: React.FC<ProductListProps> = ({
               />
               <div className="flex flex-col sm:ml-10 justify-center sm:items-start w-full sm:w-[70%]">
                 <div className="w-full flex justify-center sm:justify-start">
-                  <h3 className="text-goodpro-bold text-[25px] sm:text-[40px] w-full text-align">
+                  <h3 className="text-goodpro-bold text-[25px] lg:text-[40px] w-full text-align">
                     {item.name}
                   </h3>
                 </div>
-                <div className="text-goodpro -mt-2 text-[12px] sm:text-[18px] w-full text-align">
+                <div className="text-goodpro -mt-2 text-[12px] lg:text-[18px] w-full text-align">
                   {item.label.toUpperCase()}
                 </div>
-                <div className="w-full flex justify-center sm:justify-start text-carrois mt-3 text-[15px] sm:text-[25px] text-align">
+                <div className="w-full flex justify-center sm:justify-start text-carrois mt-3 text-[15px] lg:text-[25px] text-align">
                   {item.description}
                 </div>
 
