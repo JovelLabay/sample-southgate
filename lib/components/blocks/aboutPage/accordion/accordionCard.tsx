@@ -21,7 +21,7 @@ const AccordionCard: React.FC<AccordionCardProps> = ({ question, answer }) => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col mb-1">
+    <div className="flex justify-center items-center flex-col mb-1 w-full bg-orange-500">
       <div
         className={`faq-parallelogram items-center bg-rivieraparadise cursor-pointer ${
           isExpanded ? "expanded" : ""
@@ -31,7 +31,7 @@ const AccordionCard: React.FC<AccordionCardProps> = ({ question, answer }) => {
         <div className="skew-x-[20deg]">
           <div className="flex flex-row m-3 text-goodpro text-white">
             <div
-              className={`w-[100%] text-[25px] text-goodpro font-bold ${
+              className={`w-[100%] md:text-[18px] text-[12px] lg:text-[25px] text-goodpro font-bold ${
                 isClicked ? "text-demonicyellow" : ""
               }`}
             >
@@ -45,7 +45,7 @@ const AccordionCard: React.FC<AccordionCardProps> = ({ question, answer }) => {
         </div>
       </div>
       <div
-        className={`faq-details mt-3 text-carrois text-[20px] ml-10 ${
+        className={`faq-details mt-3 text-carrois md:text-[15px] text-[10px] bg-orange-500 lg:text-[20px] ${
           isExpanded ? "expanded" : ""
         }`}
       >
