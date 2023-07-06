@@ -160,8 +160,7 @@
 }
 
 .faq-parallelogram {
-  width: 1000px;
-  height: 70px;
+  @apply lg:h-[70px] w-[80%] md:h-[50px];
   position: relative;
   transform: skewX(-20deg);
   transition: all 0.3s ease;
@@ -172,7 +171,7 @@
 }
 
 .faq-details {
-  width: 1000px;
+  width: 80%;
   height: auto;
   max-height: 0;
   overflow: hidden;
@@ -183,8 +182,6 @@
   max-height: 200px; /* Adjust the value to fit your content */
 }
 .sideways-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;

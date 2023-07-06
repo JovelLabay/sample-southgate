@@ -21,7 +21,7 @@ export default async function AboutPage() {
                 <div className="juliana-overlay"></div>
                 <Image src={Tyson} alt="Tyson Photo" />
               </div>
-              <div className=" flex flex-col bg-red-500 w-fit">
+              <div className=" flex flex-col w-fit">
                 <div className="sm:ml-10 w-fit md:w-[300px] lg:w-[600px] flex flex-col items-center sm:items-start">
                   <span className="text-demonicyellow text-goodpro-bold lg:text-[50px] md:text-[30px] text-[20px]">
                     HOW WE STARTED
@@ -67,8 +67,8 @@ export default async function AboutPage() {
                 <Image src={Tyson} alt="Tyson Photo" />
               </div>
 
-              <div className=" flex flex-col bg-green-500 items-center">
-                <div className="sm:ml-10 w-fit md:w-[200px] lg:w-[500px] flex flex-col items-center">
+              <div className=" flex flex-col items-center">
+                <div className="sm:ml-10 w-fit md:w-[200px] lg:w-[500px] flex flex-col items-center sm:items-start">
                   <span className="text-demonicyellow text-goodpro-bold lg:text-[50px] md:text-[30px] text-[20px]">
                     WHY CHOOSE US
                   </span>
@@ -91,7 +91,9 @@ export default async function AboutPage() {
         </div>
       </section>
       {/* Accordion Section */}
-      <section>{/* <Accordion /> */}</section>
+      <section>
+        <Accordion />
+      </section>
     </main>
   );
 }
