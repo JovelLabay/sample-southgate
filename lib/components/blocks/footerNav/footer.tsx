@@ -34,8 +34,8 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="flex sm:flex-grow justify-end">
-          <div className="flex flex-col items-end">
+        <div className="flex sm:flex-grow justify-center sm:justify-end">
+          <div className="flex flex-col items-center sm:items-end">
             <div className="p-3 sm:p-10 flex gap-3 w-full justify-center sm:justify-end">
               <Image src={FacebookLogo} alt="Facebook" height={10} width={60} />
               <Image src={YoutubeLogo} alt="Youtube" height={10} width={40} />
