@@ -6,12 +6,7 @@ export default function Banner() {
   return (
     <div className="margin">
       <div className="flex items-center ">
-        <Image
-          src={Rosenke}
-          alt="Rosenke"
-          className="banner"
-          style={{ height: "410px" }}
-        />
+        <Image src={Rosenke} alt="Rosenke" className="banner-contacts" />
       </div>
       <div className="flex flex-col items-start mt-[100px]">
         <span className="text-carrois text-demonicyellow sm:text-1xl sm:text-3xl font-light">

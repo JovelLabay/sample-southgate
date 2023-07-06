@@ -110,6 +110,17 @@
   background-color: inherit;
 }
 
+.parallelogram-background-about {
+  @apply sm:w-[85%] h-auto relative sm:skew-x-[-3deg] lg:skew-x-[-8deg];
+  background-color: #2b2b2b;
+}
+
+.parallelogram-background-about::before {
+  @apply sm:absolute sm:top-0 sm:-left-[40px] sm:w-[400px] sm:h-full sm:skew-x-[3deg] lg:skew-x-[8deg];
+  content: "";
+  background-color: inherit;
+}
+
 .parallelogram-card {
   width: 250px;
   height: 360px;
@@ -120,6 +131,10 @@
 
 .juliana {
   @apply h-full w-auto relative;
+}
+
+.juliana-about {
+  @apply md:h-[300px] lg:h-full h-[300px] w-auto relative;
 }
 
 /* yellow overlay of an image */

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import SouthGate from "public/images/southgate.png";
+import Logo from "@/public/images/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -13,7 +14,7 @@ export default function Nav() {
   };
 
   return (
-    <div className="flex py-1 bg-transparent margin">
+    <div className="flex py-1 bg-transparent margin bg-green">
       <div className="flex items-center">
         <Image src={SouthGate} alt="SouthGate" width={180} height={300} />
       </div>
@@ -56,31 +57,39 @@ export default function Nav() {
         </div>
         {/* Dropdown menu */}
         {isMenu && (
-          <div className="absolute top-full right-0 w-full bg-gray-800 bg-opacity-60">
+          <div className="absolute top-full right-0 bg-gray-800 bg-opacity-90 h-[450px] w-[300px] z-1">
             <a
               href="#"
-              className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[10px] hover:text-gray-300"
+              className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
             >
               HOME
             </a>
             <a
               href="#"
-              className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[10px] hover:text-gray-300"
+              className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
             >
               ABOUT
             </a>
             <a
               href="#"
-              className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[10px] hover:text-gray-300"
+              className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
             >
               PRODUCT
             </a>
             <a
               href="#"
-              className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[10px] hover:text-gray-300"
+              className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
             >
               CONTACT
             </a>
+            <hr className="text-white mt-10" />
+            <div className="w-full justify-center flex h-fit mt-3">
+              <Image
+                src={Logo}
+                alt="Southgate"
+                className="h-fit w-fit text-center"
+              />
+            </div>
           </div>
         )}
       </nav>
