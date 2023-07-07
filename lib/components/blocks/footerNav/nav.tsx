@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import SouthGate from "public/images/southgate.png";
@@ -42,30 +43,26 @@ export default function Nav() {
         </div>
         {/* Navigation bar for desktop */}
         <nav className="sm:flex w-full gap-[50px] justify-end items-center text-white text-carrois font-bold hidden">
-          <a
-            href="#"
-            className="hover:text-gray-300 text-white text-carrois no-underline font-bold text-[15px]"
-          >
-            HOME
-          </a>
-          <a
-            href="#"
-            className="no-underline text-carrois text-[15px] text-white hover:text-gray-500"
-          >
-            ABOUT
-          </a>
-          <a
-            href="#"
-            className="no-underline text-carrois text-[15px] text-white hover:text-gray-500"
-          >
-            PRODUCT
-          </a>
-          <a
-            href="#"
-            className="no-underline text-carrois text-[15px] text-white hover:text-gray-500"
-          >
-            CONTACT
-          </a>
+          <Link href="/">
+            <div className="hover:text-gray-300 text-white text-carrois no-underline font-bold text-[15px]">
+              HOME
+            </div>
+          </Link>
+          <Link href="/about">
+            <div className="no-underline text-carrois text-[15px] text-white hover:text-gray-500">
+              ABOUT
+            </div>
+          </Link>
+          <Link href="/products">
+            <div className="no-underline text-carrois text-[15px] text-white hover:text-gray-500">
+              PRODUCT
+            </div>
+          </Link>
+          <Link href="/contacts">
+            <div className="no-underline text-carrois text-[15px] text-white hover:text-gray-500">
+              CONTACT
+            </div>
+          </Link>
         </nav>
         {/* Navigation bar for mobile */}
         <nav className="sm:hidden flex items-center w-full cursor-pointer relative">
@@ -80,30 +77,34 @@ export default function Nav() {
           {/* Dropdown menu */}
           {isMenu && (
             <div className="absolute top-full right-0 bg-gray-800 bg-opacity-90 h-[450px] w-[300px] z-1">
-              <a
-                href="#"
+              <Link
+                onClick={() => setIsMenu(!isMenu)}
+                href="/"
                 className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
               >
                 HOME
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                onClick={() => setIsMenu(!isMenu)}
+                href="/about"
                 className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
               >
                 ABOUT
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                onClick={() => setIsMenu(!isMenu)}
+                href="/products"
                 className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
               >
                 PRODUCT
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                onClick={() => setIsMenu(!isMenu)}
+                href="/contacts"
                 className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
               >
                 CONTACT
-              </a>
+              </Link>
               <hr className="text-white mt-10" />
               <div className="w-full justify-center flex h-fit mt-3">
                 <Image
