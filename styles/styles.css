@@ -212,3 +212,11 @@
 .text-align {
   @apply sm:text-left text-center;
 }
+
+.row {
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
