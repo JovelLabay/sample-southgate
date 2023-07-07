@@ -72,45 +72,67 @@ export default function Nav() {
             }`}
             onClick={handleMenu}
           >
-            {isMenu ? <AiOutlineClose /> : <GiHamburgerMenu />}
+            {isMenu ? "" : <GiHamburgerMenu />}
           </div>
           {/* Dropdown menu */}
           {isMenu && (
-            <div className="absolute top-full right-0 bg-gray-800 bg-opacity-90 h-[450px] w-[300px] z-1">
+            <div className="absolute flex-col justify-center items-center top-full right-0 bg-[#2b2b2b] h-[700px] w-[300px] z-2 animate-fade-in shadow-lg rounded-lg">
+              <div
+                className={`text-white m-2 flex transition-transform duration-300 transform ${
+                  isMenu ? "rotate-180" : ""
+                }`}
+                onClick={handleMenu}
+              >
+                <div className="text-2xl flex items-center justify-center m-2">
+                  {isMenu ? <AiOutlineClose /> : <GiHamburgerMenu />}
+                </div>
+                <div className="w-full justify-end flex m-2">
+                  <Image
+                    src={Logo}
+                    alt="Southgate"
+                    className="h-auto w-[30px]"
+                  />
+                </div>
+              </div>
               <Link
                 onClick={() => setIsMenu(!isMenu)}
                 href="/"
-                className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
+                className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[15px] hover:text-gray-300 my-3"
               >
                 HOME
               </Link>
               <Link
                 onClick={() => setIsMenu(!isMenu)}
                 href="/about"
-                className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
+                className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[15px]hover:text-gray-300 my-3"
               >
                 ABOUT
               </Link>
               <Link
                 onClick={() => setIsMenu(!isMenu)}
                 href="/products"
-                className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
+                className="block px-4 py-2 text-white text-carrois no-underline font-bold text-[15px] hover:text-gray-300 my-3"
               >
                 PRODUCT
               </Link>
               <Link
                 onClick={() => setIsMenu(!isMenu)}
                 href="/contacts"
-                className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[20px] sm:text-[10px] hover:text-gray-300 my-3"
+                className="block px-4 py-2 text-white text-carrois no-underline font-bold  text-[15px] hover:text-gray-300 my-3"
               >
                 CONTACT
               </Link>
               <hr className="text-white mt-10" />
-              <div className="w-full justify-center flex h-fit mt-3">
+              <div className="w-full items-center justify-center flex h-fit mt-3 flex-col">
                 <Image
                   src={Logo}
                   alt="Southgate"
-                  className="h-fit w-fit text-center"
+                  className="h-auto w-[70px] text-center"
+                />
+                <Image
+                  src={SouthGate}
+                  alt="Southgate"
+                  className="h-auto w-[200px]"
                 />
               </div>
             </div>
