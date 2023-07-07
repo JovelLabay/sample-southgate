@@ -32,6 +32,9 @@ const ContactForm: React.FC = () => {
       >
         <div className="margin-y gap-8 flex flex-col">
           <div className="flex flex-col text-1xl sm:text-2xl">
+            <h3 className="text-goodpro-bold text-5xl mb-5 text-demonicyellow">
+              SEND US A MESSAGE
+            </h3>
             <label htmlFor="fullName" className="mb-2">
               Full Name:
             </label>
