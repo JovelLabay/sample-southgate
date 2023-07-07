@@ -32,7 +32,7 @@ export default function Nav() {
 
   return (
     <div
-      className={`w-full bg-blue-300 z-2 sticky top-0 ${
+      className={`w-full z-2 sticky top-0 ${
         isScrolled ? "bg-[#2b2b2b]" : "bg-transparent"
       }`}
     >
