@@ -13,7 +13,7 @@ export default async function AboutPage() {
       </section>
 
       <section>
-        <div className="parallelogram-background-about flex sm:flex-col mt-[70px] text-white">
+        <div className="parallelogram-background-about flex sm:flex-col mt-[40px] sm:mt-[70px] text-white">
           <div className="sm:skew-x-[3deg] lg:skew-x-[8deg] flex sm:justify-start justify-center margin w-full h-full my-[70px] flex-col gap-[50px] sm:gap-[100px]">
             {/* First Portion */}
             <div className="flex items-center flex-col sm:flex-row">
