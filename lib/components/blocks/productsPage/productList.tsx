@@ -32,7 +32,7 @@ const ProductList: React.FC<ProductListProps> = ({
               selectedItem === item.name ? "selected" : ""
             }`}
           >
-            <div className="flex flex-col sm:flex-row my-5 justify-center items-center">
+            <div className="flex flex-col sm:flex-row my-2 justify-center items-center">
               <Image
                 src={Laursoo}
                 alt="Laursoo"
@@ -57,7 +57,7 @@ const ProductList: React.FC<ProductListProps> = ({
               </div>
             </div>
           </div>
-          <hr className="full-width-hr" />
+          <hr className="w-full" />
         </>
       ))}
     </div>
