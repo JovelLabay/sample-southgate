@@ -16,7 +16,7 @@ export default function productCard({ label, image }: Props) {
         <Image src={Laursoo} alt="Laursoo" className="w-auto h-auto" />
       </div>
       <div className="mt-3 skew-x-[9deg] ml-3">
-        <span className="text-white text-goodpro text-4xl font-bold">
+        <span className="text-white text-goodpro text-2xl font-bold">
           {label}
         </span>
       </div>

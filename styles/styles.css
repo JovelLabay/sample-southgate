@@ -122,8 +122,8 @@
 }
 
 .parallelogram-card {
-  width: 250px;
-  height: 360px;
+  width: 200px;
+  height: 300px;
   position: relative;
   transform: skewX(-9deg);
   background-color: #2b2b2b;
