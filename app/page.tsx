@@ -86,7 +86,6 @@ export default function Home() {
     <main>
       {/* YOU DIVIDE THE SECTION FROM HOMEPAGE HERE */}
       <section>
-        {/* Home Banner contains image for background only */}
         <HomeBanner />
       </section>
       {/* Image Section */}

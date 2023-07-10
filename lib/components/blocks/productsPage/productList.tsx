@@ -44,7 +44,7 @@ const ProductList: React.FC<ProductListProps> = ({
                     {item.name}
                   </h3>
                 </div>
-                <div className="text-goodpro -mt-2 text-[12px] lg:text-[18px] w-full text-align">
+                <div className="text-goodpro text-[12px] lg:text-[18px] w-full text-align">
                   {item.label.toUpperCase()}
                 </div>
                 <div className="w-full flex justify-center sm:justify-start text-carrois mt-3 text-[15px] lg:text-[25px] text-align">

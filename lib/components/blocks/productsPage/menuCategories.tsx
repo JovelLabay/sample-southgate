@@ -18,7 +18,7 @@ const MenuCategories: React.FC<MenuCategoriesProps> = ({
 }) => {
   return (
     <div className="menu-parallelogram flex mt-[70px] items-center">
-      <div className="flex h-full sm:skew-x-[20deg] text-goodpro gap-[20px] sm:gap-[90px] margin justify-center sm:items-left sm:justify-start text-white w-full">
+      <div className="flex h-full sm:skew-x-[20deg] text-goodpro gap-[20px] sm:gap-[90px] margin justify-center sm:items-left sm:justify-start text-white w-full sm:mt-0 mt-2">
         <h2
           className={`flex font-bold text-[15px] sm:text-3xl cursor-pointer justify-center items-center ${
             activeCategory === "ALL" || activeCategory === null
