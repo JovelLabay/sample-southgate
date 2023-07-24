@@ -1,34 +1,48 @@
-import React, { useState, FormEvent } from "react";
+"use client";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
+// Component
 import Button from "@/lib/functions/button";
 
-const ContactForm: React.FC = () => {
-  const [fullName, setFullName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [contactNumber, setContactNumber] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
+interface ContactFormProps {
+  formDetails: string[];
+}
 
-  const handleSubmit = (e: FormEvent) => {
+const ContactForm: React.FC<ContactFormProps> = ({ formDetails }) => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Perform form submission logic here
-    // You can access the form data using the state variables (fullName, email, contactNumber, message)
-    console.log("Form submitted:", {
-      fullName,
-      email,
-      contactNumber,
-      message,
-    });
-    // Reset form fields
-    setFullName("");
-    setEmail("");
-    setContactNumber("");
-    setMessage("");
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_qp97w9s",
+          "template_15zlx2i",
+          form.current,
+          "iuD4xAnE7Flblsgjt"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            form.current!.reset();
+            alert("Thank you for contacting us!");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   return (
-    <div className="parallelogram-background mt-[60px] sm:mt-[70px]">
+    <div className="parallelogram-background mt-[60px] sm:mt-[70px] flex">
       <form
-        onSubmit={handleSubmit}
-        className="margin text-white sm:skew-x-[8deg] flex flex-col text-carrois"
+        onSubmit={sendEmail}
+        ref={form}
+        className="margin text-white flex flex-col text-carrois w-full"
+        style={{ zIndex: "1" }}
       >
         <div className="margin-y gap-8 flex flex-col">
           <div className="flex flex-col text-1xl sm:text-2xl">
@@ -36,37 +50,34 @@ const ContactForm: React.FC = () => {
               SEND US A MESSAGE
             </h3>
             <label htmlFor="fullName" className="mb-2">
-              Full Name:
+              {formDetails[0]}:
             </label>
             <input
               type="text"
-              id="fullName"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
+              id="full_name"
+              name="full_name"
               className="text-black h-[40px] sm:h-[60px] w-[90%]"
             />
           </div>
           <div className="flex flex-col text-1xl sm:text-2xl">
             <label htmlFor="email" className="mb-2">
-              Email Address:
+              {formDetails[1]}:
             </label>
             <input
               type="email"
               id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
               className="text-black h-[40px] sm:h-[60px] w-[90%]"
             />
           </div>
           <div className="flex flex-col text-1xl sm:text-2xl">
             <label htmlFor="contactNumber" className="mb-2">
-              Contact Number:
+              {formDetails[2]}:
             </label>
             <input
               type="text"
-              id="contactNumber"
-              value={contactNumber}
-              onChange={(e) => setContactNumber(e.target.value)}
+              id="contact"
+              name="contact"
               className="text-black h-[40px] sm:h-[60px] w-[90%]"
             />
           </div>
@@ -76,13 +87,12 @@ const ContactForm: React.FC = () => {
             </label>
             <textarea
               id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              name="message"
               className="text-black h-[100px] sm:h-[200px] w-[90%]"
             />
           </div>
-          <div className="-ml-10 text-goodpro">
-            <Button label="SUBMIT" />
+          <div className="sm:-ml-10">
+            <Button label="Submit" />
           </div>
         </div>
       </form>

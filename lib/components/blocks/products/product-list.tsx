@@ -1,20 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import Button from "@/lib/functions/button"; // Update the import path for the Button component
+
+// Images
 import Laursoo from "@/public/images/laursoo.png";
 
-type MenuItem = {
-  name: string;
-  label: string;
-  description: string;
-  image: string;
-};
+// Components
+import Button from "@/lib/functions/button";
 
-type ProductListProps = {
-  getSortedItems: (category: string) => MenuItem[];
-  activeCategory: string;
-  selectedItem: string | null;
-};
+// Helper
+import { ProductListProps } from "@/lib/functions/types";
 
 const ProductList: React.FC<ProductListProps> = ({
   getSortedItems,
@@ -22,7 +16,7 @@ const ProductList: React.FC<ProductListProps> = ({
   selectedItem,
 }) => {
   return (
-    <div className="flex flex-col w-auto h-auto margin">
+    <div className="flex flex-col w-auto h-auto ml-[60px]">
       {/* Other Categories */}
       {getSortedItems(activeCategory || "").map((item) => (
         <>

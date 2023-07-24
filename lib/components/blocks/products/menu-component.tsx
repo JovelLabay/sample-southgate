@@ -1,35 +1,19 @@
+"use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import MenuCategories from "./menuCategories";
-import Laursoo from "@/public/images/laursoo.png";
-import Button from "@/lib/functions/button";
-import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
-import ProductList from "./productList";
-import Pagination from "./pagination";
 
-type Props = {
-  menuData: {
-    [category: string]: {
-      name: string;
-      label: string;
-      description: string;
-      image: string;
-    }[];
-  };
-};
+// Components
+import { MenuCategories } from "./menu-categories";
+import ProductList from "./product-list";
+import { Pagination } from "./pagination";
 
-type MenuItem = {
-  name: string;
-  label: string;
-  description: string;
-  image: string;
-};
+// Helper
+import { MenuItem, MenuData } from "@/lib/functions/types";
 
 const getSortedItems = (
   category: string,
   currentPage: number,
   itemsPerPage: number,
-  menuData: Props["menuData"]
+  menuData: MenuData["menuData"]
 ) => {
   const items: MenuItem[] = [];
 
@@ -38,18 +22,20 @@ const getSortedItems = (
       items.push(...categoryItems);
     });
   } else if (category !== "ALL" && category !== "") {
-    items.push(...menuData[category]);
+    const categoryItems = menuData[category];
+    if (categoryItems) {
+      items.push(...categoryItems);
+    }
   }
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const sortedItems = items.sort((a, b) => a.name.localeCompare(b.name));
   const slicedItems = items.slice(startIndex, endIndex);
 
   return slicedItems;
 };
 
-export default function MenuComponent({ menuData }: Props) {
+export default function MenuComponent({ menuData }: MenuData) {
   const [activeCategory, setActiveCategory] = useState("ALL");
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [allItems, setAllItems] = useState(0);
@@ -70,7 +56,10 @@ export default function MenuComponent({ menuData }: Props) {
         items.push(...categoryItems);
       });
     } else if (activeCategory !== "ALL" && activeCategory !== "") {
-      items.push(...menuData[activeCategory]);
+      const categoryItems = menuData[activeCategory];
+      if (categoryItems) {
+        items.push(...categoryItems);
+      }
     }
 
     setAllItems(items.length); // Update the total number of items
