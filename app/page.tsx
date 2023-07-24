@@ -1,139 +1,48 @@
-"use client";
-import Image from "next/image";
-import HomeBanner from "@/lib/components/blocks/home/homeBanner";
+// Components
 import DynamicProducts from "@/lib/components/blocks/home/product/products";
+import Banner from "@/lib/components/reusable-blocks/banner";
 import CarouselStatements from "@/lib/components/blocks/home/carousel";
 import Brands from "@/lib/components/blocks/home/brands";
-import Button from "@/lib/functions/button";
-import EmbedVideo from "@/lib/components/blocks/home/embedVideo";
-import Juliana from "@/public/images/juliana.png";
-import { Carousel } from "react-bootstrap";
+import Parallelogram from "@/lib/components/reusable-blocks/parallelogram";
+import EmbedVideo from "@/lib/components/reusable-blocks/embed-video";
 
-export default function Home() {
-  // Sample data for dynamic products in Home Page
-  const sampleProducts = [
-    {
-      label: "CAR",
-    },
-    {
-      label: "SUV",
-    },
-    {
-      label: "VAN",
-    },
-    {
-      label: "TRUCKS & BUS",
-    },
-  ];
+// Helper functions
+import { getHomePage } from "@/lib/functions/service";
+import { arrangeData } from "@/lib/functions/helper";
 
-  //Sample data forbrands in HomePage
-  const sampleBrands = [
-    {
-      image: "",
-      name: "Brand",
-    },
-    {
-      image: "",
-      name: "Brand",
-    },
-    {
-      image: "",
-      name: "Brand",
-    },
-    {
-      image: "",
-      name: "Brand",
-    },
-    {
-      image: "",
-      name: "Brand",
-    },
-    {
-      image: "",
-      name: "Brand",
-    },
-  ];
+export default async function Home() {
+  const data = await getHomePage();
+  const banner = data.nodeByUri.blocks[0].attributes.data;
+  const video = data.nodeByUri.blocks[5];
+  const parallelogram = data.nodeByUri.blocks[1].attributes.data;
+  const productCategories = data.productCategories;
+  const testimonies = data.testimonies.nodes;
+  const brands = data.brands;
 
-  // Sample data for statements in HomePage
-  const sampleStatements = [
-    {
-      name: "Hans Tan",
-      title: "President",
-      image: "",
-      statement:
-        "OUR MOST TRUSTED TIRE SUPPLIER - QUALITY TIRES AND EXCELLENT SERVICE",
-      company: "Company A",
-    },
-    {
-      name: "John Doe",
-      title: "President",
-      image: "",
-      statement:
-        "OUR MOST TRUSTED TIRE SUPPLIER - QUALITY TIRES AND EXCELLENT SERVICE",
-      company: "Company B",
-    },
-    {
-      name: "Jane Doe",
-      title: "President",
-      image: "",
-      statement:
-        "OUR MOST TRUSTED TIRE SUPPLIER - QUALITY TIRES AND EXCELLENT SERVICE",
-      company: "Company C",
-    },
-  ];
+  const parallelDeets = arrangeData(parallelogram);
 
   return (
     <main>
-      {/* YOU DIVIDE THE SECTION FROM HOMEPAGE HERE */}
       <section>
-        <HomeBanner />
+        <Banner banner={banner} />
       </section>
-      {/* Image Section */}
-      <section>
-        <div className="parallelogram-background flex sm:flex-col mt-[70px] text-white justify-center">
-          <div className="sm:skew-x-[8deg] sm:flex margin items-center w-auto sm:w-[700px] lg:w-[900px] h-full my-[70px] margin-y">
-            <div className="juliana h-full w-auto">
-              <div className="juliana-overlay w-fit"></div>
-              <Image src={Juliana} alt="Juliana Photo" />
-            </div>
-
-            <div className="flex flex-col items-center">
-              <div className="sm:ml-10 sm:w-[400px] lg:w-[500px] h-auto w-fit flex  flex-col sm:block justify-center items-center sm:justify-start my-3 sm:my-0 ">
-                <span className="text-demonicyellow text-[20px] sm:text-2xl lg:text-5xl font-bold text-center">
-                  SOUTHGATE TAGLINE HERE
-                </span>
-                <br />
-                <span className="text-carrois text-15px sm:text-1xl lg:text-2xl text-center">
-                  Southgate Express Marketing, Inc. is presently one of the
-                  leaders in importation and distribution of tires in the
-                  Philippines. It was established in August 1999 and has been
-                  the sole agent of Aeolus Brand Tires in the country since
-                  then. Southgate propelled the Aeolus brand as a primary
-                  imported tire brand in the Philippines capturing significant
-                  market share and establishing the “Aeolus” brand across Luzon,
-                  Visayas and Mindanao.
-                </span>
-              </div>
-              <div className="mt-3 justify-center w-full text-center flex sm:justify-start">
-                <Button label="KNOW MORE" />
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Parallelogram Section */}
+      <section className="w-full">
+        <Parallelogram data={parallelDeets} />
       </section>
       {/* Products Section */}
       <section>
-        <DynamicProducts products={sampleProducts} />
+        <DynamicProducts products={productCategories} />
       </section>
       <section>
         {/* Carousel Here */}
-        <CarouselStatements statements={sampleStatements} />
+        <CarouselStatements statements={testimonies} />
       </section>
       <section>
-        <Brands brands={sampleBrands} />
+        <Brands brands={brands} />
       </section>
       <section>
-        <EmbedVideo />
+        <EmbedVideo video={video.attributes.url} />
       </section>
     </main>
   );

@@ -1,16 +1,12 @@
 import React from "react";
+
+// Icons
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 
-type PaginationProps = {
-  allItems: number;
-  currentPage: number;
-  goToPreviousPage: () => void;
-  activeCategory: string;
-  itemsPerPage: number;
-  goToNextPage: () => void;
-};
+// Types
+import { PaginationProps } from "@/lib/functions/types";
 
-const Pagination: React.FC<PaginationProps> = ({
+export const Pagination: React.FC<PaginationProps> = ({
   allItems,
   currentPage,
   goToPreviousPage,
@@ -18,9 +14,11 @@ const Pagination: React.FC<PaginationProps> = ({
   itemsPerPage,
   goToNextPage,
 }) => {
+  const totalPages = Math.ceil(allItems / itemsPerPage);
+
   return (
     <>
-      {allItems / 3 > 1 ? (
+      {totalPages > 1 ? (
         <div className="flex justify-center items-center gap-2 my-3">
           <div className="block m-20 bg-rivieraparadise">
             <button
@@ -39,10 +37,7 @@ const Pagination: React.FC<PaginationProps> = ({
             <button
               onClick={goToNextPage}
               style={{
-                display:
-                  currentPage < Math.ceil(allItems / itemsPerPage)
-                    ? "block"
-                    : "none",
+                display: currentPage < totalPages ? "block" : "none",
               }}
             >
               <div className="text-1xl text-white m-2">
@@ -51,11 +46,7 @@ const Pagination: React.FC<PaginationProps> = ({
             </button>
           </div>
         </div>
-      ) : (
-        <></>
-      )}
+      ) : null}
     </>
   );
 };
-
-export default Pagination;

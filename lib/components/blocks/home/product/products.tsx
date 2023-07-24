@@ -1,17 +1,13 @@
 import Image from "next/image";
-import ProductCard from "./productCard";
+import ProductCard from "./product-card";
 import Button from "@/lib/functions/button";
-import Laursoo from "@/public/images/laursoo.png";
 
-type Product = {
-  label: string;
-};
+export default function DynamicProducts({ products }: any) {
+  const reversedProducts = [];
+  for (let i = products.edges.length - 1; i >= 0; i--) {
+    reversedProducts.push(products.edges[i]);
+  }
 
-type Props = {
-  products: Product[];
-};
-
-export default function DynamicProducts({ products }: Props) {
   return (
     <div className="lg:flex lg:flex-col block justify-end w-auto margin-y overflow-hidden">
       <div className="flex flex-col lg:flex-row lg:justify-end ">
@@ -21,9 +17,12 @@ export default function DynamicProducts({ products }: Props) {
           </span>
         </div>
         <div className="flex flex-col lg:flex-row gap-5 justify-center items-center">
-          {products.map((product, index) => (
-            <div key={index} className="flex flex-col">
-              <ProductCard label={product.label} image="" />
+          {reversedProducts.map((product: any) => (
+            <div key={product.node.id} className="flex flex-col">
+              <ProductCard
+                label={product.node.productCategory.name}
+                image={product.node.productCategory.image.sourceUrl}
+              />
             </div>
           ))}
         </div>

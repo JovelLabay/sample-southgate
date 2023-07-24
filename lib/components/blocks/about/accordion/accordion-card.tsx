@@ -1,4 +1,7 @@
+"use client";
 import React, { useState } from "react";
+
+// Icons
 import { SlArrowRight, SlArrowDown } from "react-icons/sl";
 
 interface AccordionCardProps {
@@ -31,7 +34,7 @@ const AccordionCard: React.FC<AccordionCardProps> = ({ question, answer }) => {
         <div className="skew-x-[20deg]">
           <div className="flex flex-row m-3 text-goodpro text-white">
             <div
-              className={`w-[100%] md:text-[18px] text-[12px] lg:text-[25px] text-goodpro font-bold ${
+              className={`w-[100%] text-[18px] lg:text-[25px] text-goodpro font-bold ${
                 isClicked ? "text-demonicyellow" : ""
               }`}
             >
@@ -45,7 +48,7 @@ const AccordionCard: React.FC<AccordionCardProps> = ({ question, answer }) => {
         </div>
       </div>
       <div
-        className={`faq-details mt-3 text-carrois md:text-[15px] text-[10px] lg:text-[20px] ${
+        className={`faq-details mt-3 text-carrois md:text-[15px] text-[12px] lg:text-[20px] ${
           isExpanded ? "expanded" : ""
         }`}
       >
