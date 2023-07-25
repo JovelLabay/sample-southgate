@@ -31,7 +31,7 @@ export default function ControlledCarousel({ statements }: any) {
               alt="Slide"
               width={1000}
               height={1000}
-              className="w-auto h-[600px]"
+              className="w-full h-[600px]"
             />
           </div>
           <Carousel.Caption className="flex items-center justify-center mb-8">
