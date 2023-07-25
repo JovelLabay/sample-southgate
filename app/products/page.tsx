@@ -1,127 +1,95 @@
-"use client";
 import React from "react";
-import ProductBanner from "@/lib/components/blocks/productsPage/banner";
-import MenuComponent from "@/lib/components/blocks/productsPage/menuComponent";
+import client from "@/lib/apollo/client";
+
+// Components
+import Banner from "@/lib/components/reusable-blocks/banner";
+import MenuComponent from "@/lib/components/blocks/products/menu-component";
+
+// Helper
+import { GetProductsPage } from "@/lib/graphql";
 
 export default async function ProductsPage() {
-  // Sample data for menu
-  const sampleMenuData = {
-    CARS: [
-      {
-        name: "A CAR AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "C CAR AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "B CAR AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-    ],
-    SUV: [
-      {
-        name: "A SUV AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "C SUV AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "B SUV AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-    ],
-    VAN: [
-      {
-        name: "A VAN AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "C VAN AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "B VAN AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-    ],
-    "TRUCKS & BUS": [
-      {
-        name: "A TB AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "C TB AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "B TB AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-      {
-        name: "D TB AEOLUS STEERINGACE AU01",
-        label: "THE HIGH PERFORMANCE TYRE FOR A SPORTY DRIVING STYLE",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        image: "",
-      },
-    ],
+  async function getProductsPage() {
+    const pages = await client.query({
+      query: GetProductsPage,
+    });
+
+    return await pages?.data;
+  }
+
+  const data = await getProductsPage();
+  const bannerData = data.nodeByUri.blocks[0].attributes.data;
+  const products = data.products;
+
+  const productsData: {
+    CARS: {
+      name: string;
+      label: string;
+      description: string;
+      image: string;
+      id: string;
+    }[];
+    SUV: {
+      name: string;
+      label: string;
+      description: string;
+      image: string;
+      id: string;
+    }[];
+    VAN: {
+      name: string;
+      label: string;
+      description: string;
+      image: string;
+      id: string;
+    }[];
+    "TRUCKS & BUS": {
+      name: string;
+      label: string;
+      description: string;
+      image: string;
+      id: string;
+    }[];
+  } = {
+    CARS: [],
+    SUV: [],
+    VAN: [],
+    "TRUCKS & BUS": [],
   };
 
-  console.log(sampleMenuData);
-  console.log("CARS: ", sampleMenuData.CARS);
-  console.log("TRUCKS: ", sampleMenuData["TRUCKS & BUS"]);
-  console.log("CATEGORIES: ", sampleMenuData);
+  products.nodes.forEach((node: any) => {
+    const { title, label, description, type, image } = node.productDetails;
+    const id = node.id;
+
+    const product = {
+      name: title,
+      label,
+      description,
+      image: image.sourceUrl,
+      id,
+    };
+
+    if (type === "Car") {
+      productsData.CARS.push(product);
+    } else if (type === "Suv") {
+      productsData.SUV.push(product);
+    } else if (type === "Van") {
+      productsData.VAN.push(product);
+    } else if (type === "Trucks-Bus") {
+      productsData["TRUCKS & BUS"].push(product);
+    }
+  });
 
   return (
     <main>
       {/* Header Section */}
       <section>
-        <ProductBanner />
+        <Banner banner={bannerData} />
       </section>
       {/* Menu Section */}
       <section>
         <div>
-          <MenuComponent menuData={sampleMenuData} />
+          <MenuComponent menuData={productsData} />
         </div>
       </section>
     </main>

@@ -1,19 +1,30 @@
-"use client";
 import React from "react";
-import Banner from "@/lib/components/blocks/contactPage/banner";
-import ContactForm from "@/lib/components/blocks/contactPage/contactForm";
-import MapView from "@/lib/components/blocks/contactPage/mapView";
+
+// Components
+import Banner from "@/lib/components/reusable-blocks/banner";
+import ContactForm from "@/lib/components/blocks/contacts/contact-form";
+import MapView from "@/lib/components/blocks/contacts/map-view";
+
+// Helper
+import { getContactPage } from "@/lib/functions/service";
+import { arrangeLabels } from "@/lib/functions/helper";
 
 export default async function ContactPage() {
+  const contactData = await getContactPage();
+  const banner = contactData[0].attributes.data;
+  const map = contactData[2].attributes.data;
+  const form = contactData[1].attributes.data;
+  const formDetails = arrangeLabels(form);
+
   return (
     <main>
       {/* Banner */}
       <section>
-        <Banner />
+        <Banner banner={banner} />
       </section>
       {/* Contact Forms */}
       <section>
-        <ContactForm />
+        <ContactForm formDetails={formDetails} />
       </section>
       {/* Maps */}
       <section>
@@ -23,7 +34,7 @@ export default async function ContactPage() {
               FIND US
             </span>
           </div>
-          <MapView />
+          <MapView location={map} />
         </div>
       </section>
     </main>
