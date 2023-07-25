@@ -23,7 +23,7 @@ export default function ControlledCarousel({ statements }: any) {
       indicators
     >
       {reversedTestimonies.map((statement: any) => (
-        <Carousel.Item key={statement.testimonyDetails.id}>
+        <Carousel.Item key={statement.testimonyDetails.image.id}>
           <div className="w-full flex items-center justify-center">
             <div className="juliana-overlay"></div>
             <Image
