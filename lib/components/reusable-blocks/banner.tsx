@@ -12,13 +12,6 @@ export default function Banner({ banner }: { banner: any }) {
 
   return (
     <>
-      {/* <Image
-        src={image}
-        alt="Giorgio"
-        height={1000}
-        width={1000}
-        className={`${logo ? "banner" : "banner-products"}`}
-      /> */}
       <div
         style={{
           backgroundImage: `url(${image})`,
