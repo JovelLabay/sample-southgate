@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import MikeBird from "@/public/images/enis.png";
 
 export default function Banner({ banner }: { banner: any }) {
   const image = banner.image || "";
@@ -7,15 +8,17 @@ export default function Banner({ banner }: { banner: any }) {
   const logo = banner.logo || null;
   const title = banner.title;
 
+  console.log("TEST", image);
+
   return (
     <>
-      <Image
-        src={image}
-        alt="Giorgio"
-        height={1000}
-        width={1000}
+      <div
+        style={{
+          backgroundImage: `url(${image})`,
+          top: "0",
+        }}
         className={`${logo ? "banner" : "banner-products"}`}
-      />
+      ></div>
 
       <div className="margin">
         <div className="flex flex-none mt-3 sm:flex-col">

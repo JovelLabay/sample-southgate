@@ -27,7 +27,7 @@ export default function DynamicProducts({ products }: any) {
           ))}
         </div>
       </div>
-      <div className="flex justify-end mt-3 mr-[790px]">
+      <div className="flex sm:justify-end sm:pr-[790px] mt-3 mr-[790px] w-full justify-center">
         <Button label="SEE DETAILS" />
       </div>
     </div>
